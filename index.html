@@ -1,45 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Erich T UNCC Webpage</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #dfddf5;
-			margin: 0;
-			padding: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			min-height: 50vh;
-			flex-direction: column;
-			color: #333;
-		}
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Erich T. Webpage</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #eaead5;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 50vh;
+				height: 100%;
+				flex-direction: column;
+				color: #333;
+			}
 
-		h1 {
-			color: #444;
-			margin-bottom: 20px;
-			font-size: 48px;
-			text-align: center;
-		}
+			header {
+				margin-top: 100px;
+			}
 
-		a {
-			color: blue;
-			padding: 10px 20px;
-			border-radius: 5px;
-			font-size: 24px;
-		}
+			h1 {
+				font-size: 4em;
+			}
 
-		a:hover {
-			color: #044386;
-		}
-	</style>
-	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-</head>
-<body>
-	<h1>I am Erich Then, and this is the root of my website.</h1>
-	<a href="itis3135/">Click to go to my ITIS3135 Site!</a> 
-</body>
+			h2 {
+				font-size: 2em;
+			}
+
+			#tagline {
+				font-size: 1.3em;
+				text-align: center;
+			}
+
+			footer {
+				margin-top: 300px;
+				display: flex;
+				justify-content: center; /* Centers #links-container */
+				align-items: center;
+				width: 100%;
+			}
+
+			.link-divider {	
+				font-weight: 900;
+			}
+		
+			#links-container {
+				border: 3px solid black;
+				display: flex;
+				justify-content: space-around; /* Equal spacing between links */
+				align-items: center;
+				padding: 10px 20px; /* Adds space inside the border */
+				width: fit-content; /* Shrinks to fit content */
+			}
+
+			nav {
+				display: flex;
+				flex-direction: row;
+				gap: 20px; /* Adds spacing between links */
+			}
+
+			a {
+				color: blue;
+				padding: 10px 20px;
+				border-radius: 5px;
+				font-size: 24px;
+				text-decoration: none; /* Removes underline */
+			}
+
+			a:hover {
+				color: #044386;
+			}
+		</style>
+		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Erich Then | ITIS 3135</h1>
+		</header>
+		<main>
+			<h2>My personal website</h2>
+			<p id="tagline">Buy my course (kidding)</p>
+		</main>
+		<footer>
+			<menu>
+				<nav>
+					<a href="https://github.com/erichthen/">Github.com</a> 
+					<p class="link-divider">~</p>
+					<a href="https://webpages.charlotte.edu/ethen/">CLT Web</a>
+					<p class="link-divider">~</p>
+					<a href="https://erichthen.github.io/">Github.io</a> 
+					<p class="link-divider">~</p>
+					<a href="https://webpages.charlotte.edu/ethen/itis3135/">ITIS3135</a>
+					<p class="link-divider">~</p>
+					<a href="https://www.linkedin.com/in/erichthen/">LinkedIn</a>
+				</nav>
+			</menu>
+		</footer>
+	</body>
 </html>
