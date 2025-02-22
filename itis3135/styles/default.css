@@ -43,7 +43,7 @@ p a, h3 a {
 }
 
 a:hover {
-    color: #044386;
+    color: #0c4f0b;
     text-decoration: underline;
 }
 
@@ -79,7 +79,7 @@ footer {
 }
 
 a {
-    color: #80A4ED;
+    color: #369465;
     font-weight: bold;
 }
 
@@ -101,11 +101,12 @@ p {
     margin-top: 44px;
 }
 
-#org-link {
+.org-link {
     margin-left: -14px;
-    color: #80A4ED;
+    color: #369465;
     margin-right: -14px;
 }
+
 
 figure {
     margin: auto;
@@ -132,5 +133,5 @@ img {
 #name-link {
     margin-left: -15px;
     margin-right: -15px;
-    color: #80A4ED;
+    color: #369465;
 }
