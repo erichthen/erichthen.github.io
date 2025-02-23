@@ -92,7 +92,7 @@ p {
 
 #welcome-message {
     color: #474448;
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
 
 .container {
@@ -139,8 +139,8 @@ img {
 }
 
 #contract-container {
-    margin: 50px 150px -100px 150px;
-    text-align: center;
+    margin: 50px 150px -130px 150px;
+    text-align: left;
 }
 
 #name-link {
@@ -155,7 +155,6 @@ img {
 
 .crap-div {
     text-align: left;
-    margin-left: 14%;
 }
 
 .crap-principles-text {
@@ -167,12 +166,21 @@ img {
     font-weight: bold;
 }
 
+.website-name {
+    text-align: left;
+    margin-left: -20px;
+}
+
 #bad-website-name {
     margin-top: 12px;
 }
 
 #good-website-name {
     margin-top: 50px;
+}
+
+#website-sections p {
+    text-align: left;
 }
 
 #does-follow-good {

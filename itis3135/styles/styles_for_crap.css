@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'ComicPapyrus';
+    src: url('../stuff/Comic Papyrus.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'ComicPapyrus';
+    text-decoration: underline;
+    margin-top: -10px;
+}
+
+
+body {
+    background-color: white;
+    font-family: Comic Sans MS; /* Just to make it worse */
+}
+
+h2 {
+    font-family: Papyrus;
+    color: black;
+}
+
+h4 {
+    font-family: "Comic Sans MS";
+    color: black;
+    margin-bottom: 100px;
+}
+
+p {
+    font-family: Times New Roman;
+}
+
+ul {
+    text-align: center;
+}
+
+
+div {
+    border: 10px solid black;
+}
+
+#caption {
+    margin-left: -150px;
+}
+
+a {
+    font-family: 'Times New Roman';
+}
