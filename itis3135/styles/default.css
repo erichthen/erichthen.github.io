@@ -105,6 +105,11 @@ p {
     margin-top: 44px;
 }
 
+#family-picture {
+    width: 400px;
+    height: auto;
+}
+
 .org-link {
     margin-left: -14px;
     color: #369465;
@@ -171,6 +176,8 @@ img {
 .website-name {
     text-align: left;
     margin-left: -20px;
+    text-decoration: underline;
+    text-decoration-color: #369465;
 }
 
 #bad-website-name {
