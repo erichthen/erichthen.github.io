@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 50vh;
-    max-width: 1050px;
+    max-width: 1200px;
     width: 80%;
     flex-direction: column;
     color: #474448;
@@ -215,6 +215,72 @@ footer p {
 header p {
     font-weight: bold;
 }
+
+.complex-table table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.complex-table th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+.complex-table th {
+    background-color: #333;
+    color: white;
+}
+
+.complex-table tr:nth-child(odd) {
+    background-color: #dad9d9; 
+}
+
+.complex-table tr:nth-child(even) {
+    background-color: #ffffff; 
+}
+
+#table-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-right: 85px;
+    margin-bottom: -60px;
+}
+
+#data-and-simple {
+    margin-top: 50px;
+}
+
+.table-h3 {
+    text-align: center;
+}
+
+#complex-fig {
+    margin-bottom: 33px;
+    margin-right: -175px;
+}
+
+#simple-header {
+    margin-top: 67px;
+
+}
+
+#complex-header {
+    margin-right: -175px;
+    margin-top: 67px;
+}
+
+.sales-cell {
+    background-color: #dad9d9 !important;
+}
+
+.hr-cell {
+    background-color: #ffffff !important;
+}
+
+
 
 /*media queries for tablets*/
 
