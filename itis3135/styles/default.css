@@ -242,8 +242,6 @@ header p {
 }
 
 #table-container {
-    display: flex;
-    flex-direction: row;
     gap: 50px;
     margin-right: 190px;
     margin-bottom: -60px;
@@ -251,10 +249,15 @@ header p {
 
 #data-and-simple {
     margin-top: 50px;
+    margin-left: 200px;
 }
 
 .table-h3 {
     text-align: center;
+}
+
+.basic-ol {
+    margin-left: 50px;
 }
 
 #complex-fig {
@@ -279,6 +282,7 @@ header p {
 .hr-cell {
     background-color: #ffffff !important;
 }
+
 
 
 
