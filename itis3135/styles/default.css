@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
-    background-color: #fae3e3;
+    background-color: #f9dbd5;
+    /* background-color: #ECCFC3; */
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -20,7 +21,7 @@ h2, h3 {
 h1 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 3rem;
-    margin-top: -5px;
+    margin-top: -10px;
 }
 
 #title-text {
@@ -33,7 +34,12 @@ a {
     text-decoration: underline;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 19px;
+}
+
+a, h3 a {
+    color: #3C4F76;
+    font-weight: bold;
 }
 
 p a, h3 a {
@@ -45,7 +51,7 @@ p a, h3 a {
 }
 
 a:hover {
-    color: #0c4f0b;
+    color: #172239;
     text-decoration: underline;
 }
 
@@ -56,14 +62,20 @@ header {
     margin-top: 50px;
 }
 
+hr {
+    border: none;
+    height: 2px;  /* Adjust thickness */
+    background-color: black; /* Change color if needed */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    display: block;
+    width: 75%;
+}
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#name-of-page {
-    margin-top: 90px;
 }
 
 nav {
@@ -82,24 +94,24 @@ footer {
     justify-content: center;
 }
 
-a, h3 a {
-    color: #369465;
-    font-weight: bold;
-}
-
 p {
     color: #474448;
 }
 
 #welcome-message {
+    font-size: 18px;
     color: #474448;
-    font-size: 1.1em;
     margin-bottom: 75px;
+    font-weight: bold;
 }
 
-.container {
+.intro-container {
     margin-bottom: -150px;
     max-width: 1000px;
+}
+
+.intro-container li {
+    margin-bottom: 12px;
 }
 
 #intro-title {
@@ -114,7 +126,7 @@ p {
 
 .org-link {
     margin-left: -14px;
-    color: #369465;
+    color: #3C4F76;
     margin-right: -14px;
 }
 
@@ -147,19 +159,19 @@ img {
 }
 
 #contract-container {
-    margin: 50px 150px -130px 150px;
+    width: 85%;
     text-align: left;
+    margin-left: 15px;
+    margin-top: 60px;
+    margin-bottom: -120px;
     max-width: 1000px;
 }
 
 #name-link {
     margin-left: -15px;
     margin-right: -15px;
-    color: #369465;
-}
-
-#website-sections {
-    text-align: center;
+    color: #3C4F76;
+    font-weight: bold;
 }
 
 .crap-div {
@@ -169,17 +181,19 @@ img {
 .crap-principles-text {
     font-weight: bold;
     text-align: center;
+    margin-bottom: -10px;
 }
 
 .eval-text {
     font-weight: bold;
+    margin-bottom: -10px;
 }
 
 .website-name {
-    text-align: left;
-    margin-left: -20px;
+    text-align: center;
+    color: #3C4F76;
     text-decoration: underline;
-    text-decoration-color: #369465;
+    text-decoration-color: #3C4F76;
 }
 
 #bad-website-name {
@@ -192,6 +206,11 @@ img {
 
 #website-sections p {
     text-align: left;
+}
+
+.website-container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 #does-follow-good {
@@ -214,6 +233,15 @@ footer p {
 
 header p {
     font-weight: bold;
+}
+
+#name-of-page {
+    margin-top: 120px;  
+    font-size: 28px;
+}
+
+#table-page-name {
+    margin-top: 60px;
 }
 
 .complex-table table {
@@ -242,15 +270,14 @@ header p {
 }
 
 #table-container {
-    gap: 50px;
     margin-right: 190px;
-    margin-bottom: -60px;
+    margin-bottom: -120px;
 }
 
 #data-and-simple {
-    margin-top: 50px;
-    margin-left: 200px;
+    margin-left: 188px;
 }
+
 
 .table-h3 {
     text-align: center;
@@ -307,10 +334,6 @@ header p {
         width: 80%;
     }
 
-    #contract-container {
-        margin: 40px 50px -100px 50px;
-    }
-
     .container {
         margin-bottom: -100px;
     }
@@ -340,10 +363,6 @@ header p {
     #family-picture, img {
         width: 100%;
         max-width: 300px;
-    }
-
-    #contract-container {
-        margin: 30px 20px -80px 20px;
     }
 
     .container {

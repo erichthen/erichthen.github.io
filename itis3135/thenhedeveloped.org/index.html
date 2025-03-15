@@ -7,102 +7,117 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <!-- Color Scheme link: https://coolors.co/4e5166-fcaa67-ffffc7-813405-bc9ec1 -->
     <style>
-        body {
-            background-color: #F0F7EE;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
+        /* Center everything while keeping text left-aligned */
+body {
+    background-color: #c5d2c1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the container */
+    justify-content: center; /* Vertically centers */
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
 
-        h1 {
-            color: #1b2461;
-            font-size: 2.9rem;
-        }
+/* Limit width for better readability */
+main, header, footer {
+    width: 80%; /* Adjusted width to keep content centered and not too wide */
+    max-width: 1000px; /* Prevents it from getting too wide on larger screens */
+}
 
-        h2 {
-            color: #1b2461;
-            font-size: 1.7rem;
-            margin-bottom: 50px;
-        }
+/* Header styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    text-align: center;
+}
 
-        img {
-            width: 25%;
-        }
+h1 {
+    color: #1b2461;
+    font-size: 2.4rem;
+    margin-top: 55px;
+    text-align: center;
+}
 
-        #logo-container {
-            margin-top: 3px;
-            margin-left: 5px;
-        }
+#logo-container {
+    margin-left: 10px;
+}
 
-        header {
-            display: flex;
-            flex-direction: row;
-            margin-left: 350px;
-            margin-top: 20px;
-        }
+img {
+    width: 5%;
+    position: absolute;
+    top: 37px;
+    right: 435px;
+}
 
-        main {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
+main {
+    text-align: left;
+}
 
-        p {
-            font-size: 1.1rem;
-            color: #1b2461;
-            font-weight: bold;
-            text-align: left;
-        }
+h2 {
+    color: #1b2461;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
 
-        ul li::before {
-            content: "⦿";
-            margin-right: 15px;
-        }
+h4 {
+    font-size: 1.3rem;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    color: #87246b;
+    text-align: center;
+}
 
-        ul {
-            list-style-type: none; 
-            text-align: left;
-            margin-left: 144px;
-            color: #87246b;
-            font-weight: bold;
-        }
+p {
+    font-size: 1.1rem;
+    color: #1b2461;
+    font-weight: bold;
+}
 
-        #welcome-paragraph {
-            margin-bottom: 50px;
-            margin-top: -20px;
-        }
+#slogan, #contact-info {
+    text-align: center;
+    color: #87246b;
+    margin-bottom: 35px;
+}
 
-        #closing-text-container {
-            margin-top: 30px;
-        }
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: -15px;
+    margin-top: 30px;
+}
 
-        #closing-text-container h4 {
-            margin-bottom: -10px;
-        }
+ul li {
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
 
-        h4 {
-            font-size: 1.3rem;
-            margin-top: 40px;
-            color: #87246b;
-        }
+ul li::before {
+    content: "⦿";
+    margin-right: 10px;
+    color: #87246b;
+}
 
-        #contact-info {
-            color: #87246b;
-            text-align: center;
-        }
+#closing-text-container {
+    margin-top: 30px;
+}
 
-        #slogan {
-            margin-bottom: 50px;
-            color: #87246b;
-            text-align: center;
-            margin-top: -20px;
-        }
+footer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
 
-        #designed-by {
-            margin-top: -2px;
-        }
+}
+
+#designed-by {
+    margin-top: 10px;
+}
 
     </style>
 </head>
@@ -120,7 +135,7 @@
         <p id="welcome-paragraph">
             Hello! I am Erich Then, the man behind ThenHeDeveloped. 
             This is a company dedicated to building websites for individuals and businesses. 
-            <br>I bring my clients dreams and ideas to the internet, one HTML element and JavaScript object at a time!
+            <br><br>I bring my clients dreams and ideas to the internet, one HTML element and JavaScript object at a time!
         </p>
 
         <ul>
@@ -135,14 +150,14 @@
         </ul>
 
         <div id="closing-text-container">
-            <p>Listen, we know what it's like to try to make a website on your own. <br>Even with resources like wordpress, it can be a real hastle. It is our mission to take all of that unneeded stress away from you, <br> so you can focus on what truly matters: your product.</p>
+            <p>Listen, we know what it's like to try to make a website on your own. Even with resources like WordPress, it can be a real hastle. It is our mission to take all of that unneeded stress away from you, so you can focus on what truly matters: your product.</p>
             <h4>Contact us!</h4>
             <p id="contact-info">thenhedeveloped@thenhedeveloped.com | 212 5th Avenue New York, New York 10044 | 1-800-7777</p>
         </div>
     </main>
 
     <footer>
-        <p id="designed-by">Page created by Erich Then ©2025</p>
+        <p id="designed-by">Page created by Erich Then © 2025</p>
     </footer>
 </body>
 </html>
