@@ -42,7 +42,7 @@
             height: 3px;  
             background-color: white; 
             width: 1100px;
-            margin-bottom: 30px;
+            margin-bottom: 0px;
             margin-top: -9px;
         }
         hr:first-child {
@@ -59,14 +59,16 @@
             text-decoration: underline;
             padding: 10px;
             font-weight: bold;
+            transition: transform 0.1s ease-in-out;
         }
         nav button:hover {
             color: #aba8a4;
+            transform: scale(1.3)
         }
         footer {
             margin-top: 55px;
-            margin-bottom: 150px;
             text-align: center;
+            padding-bottom: 14px;
         }
         footer a {
             margin-left: 6px;
@@ -89,6 +91,10 @@
         #what-text {
             font-size: 1.1rem;
             text-align: center;
+            margin-top: -15px;
+        }
+        #where-title {
+            margin-top: 50px;
         }
         h1 {
             color: #cbc9b0;
@@ -101,6 +107,9 @@
             text-align: center;
             font-size: 1.6rem;
         }   
+        #what-title {
+            margin-right: 2px;
+        }
         .section-content {
             display: none;
         }
@@ -134,7 +143,7 @@
         }
         ul li {
             margin-bottom: 12px;
-            color: #453F3C;
+            color: #654c3f;
             margin-left: 5px;
         }
         ul li:first-child {
@@ -193,72 +202,97 @@
         #how-text {
             width: 110%;
             text-align: left;
-            margin-left: -12px;
+            margin-left: -27px;
+            margin-top: -5px;
+            margin-bottom: 44px;
         }
-        /* Buttons container */
+        #how-title {
+            margin-top: 70px;
+        }
+        #how-container {
+            padding-bottom: -300px;
+        }
         #meditation-buttons {
-            background-color: #453F3C;
+            background-color: #cbc9b0;
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-top: 40px;
-            border: 3px solid white;
+            margin-bottom: 40px;
+            border: 6px solid #412313;
             padding: 10px;
-            border-radius: 8px;
+            border-radius: 20px;
+            box-shadow: 20px 20px 35px rgba(0, 0, 0, 0.5);
         }
-
-        /* Style for each button */
         .meditation-btn {
-            background-color: #e7d4c2;
-            border: 3px solid black;
+            background: linear-gradient(to bottom, #42271a, #91523b);
+            color: #FEFCFB;
+            border: 1.5px solid black;
             border-radius: 10px;
             padding: 10px 15px;
             font-size: 1rem;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s ease-in-out;
+            transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+            font-weight: bold;
         }
-
+        .selected {
+            background: #8f796c;
+            pointer-events: none; 
+            transform: none; 
+        }
         .meditation-btn:hover {
-            background-color: #776252;
+            transform: scale(1.15);
         }
-
-        /* Hidden content container */
         #meditation-content {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 80%;
-            max-width: 800px;
-            margin-top: 30px;
+            width: 120%;
             position: relative;
-            height: 300px;
-            overflow: hidden;
+            height: 400px;
+            margin-bottom: -100px;
         }
-
-        /* Image - starts hidden off-screen */
         #meditation-image {
-            width: 300px;
+            width: 380px;
             height: auto;
             display: none;
             position: absolute;
-            left: -100%;
+            top: 10px;
         }
-
-        /* Ordered list container - starts hidden off-screen */
+        #meditation-image-container {
+            text-align: center;
+            font-size: 15px;
+        }
+        #meditation-caption {
+            width: 40%;
+            font-size: 15px;
+            color: #cbc9b0;
+            opacity: 0; 
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            top: 270px;
+            left: 6px;
+        }
         #meditation-steps {
             display: none;
             position: absolute;
-            right: -100%;
-            width: 50%;
+            left: 360px;
+            top: 12px;
+            width: 45%;
+            background-color: transparent;
         }
-
-        /* Style for ordered list */
-        #meditation-steps ol {
+        #meditation-steps ol,
+        #meditation-steps li {
             list-style-position: inside;
-            font-size: 1.2rem;
-            color: #FEFCFB;
+            font-size: 17px;
+            color: #cbc9b0;
+            font-weight: bold;
         }
+        #meditation-steps li {
+            margin-bottom: 10px;
+        }
+    
     </style>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -286,7 +320,7 @@
     <main>
         
         <section class="section-content" id="home">
-            <h2 class="section-title">What is meditation?</h2>
+            <h2 id="what-title" class="section-title">What is meditation?</h2>
             <p id="what-text">Typical meditation does not entail sitting like a monk for hours on end in order to reach enlightenment. 
                 Meditation is hard to define because it comes in so many forms. I like to think of it as the deliberate 
                 exploration of your consciousness. Well, what is consciousness? Consciousness, to me, is the 
@@ -308,28 +342,30 @@
                 </div>
             </div>
         </section>
-
+ 
         <section class="section-content" id="about">
             <h2 class="section-title">About me</h2>
         </section>
         
         <section class="section-content" id="how">
             <div id="how-container">
-                <h2 class="section-title">How do you meditate?</h2>
+                <h2 class="section-title" id="how-title">How do you meditate?</h2>
                 <p id="how-text">Great question! Go ahead and explore these different meditations, and I'll give you some simple steps and advice. Note that there are many types of meditation, and I am only 
-            covering a few. Do some research on more types and find one that suits you best. Never be too hard on yourself. If you are struggling, that is good. Refocusing your attention back to the meditation
-                is like a rep in the gym. So when it comes to meditation, the more distracted you are, the more you grow. Isn't that awesome?!</p>
+                    covering a few. Do some research on more types and find one that suits you best. Additionally, these steps are <strong>not</strong> set in stone. Do what you are comfortable with, and never be too hard on yourself.</p>
                 <div id="meditation-buttons">
                     <button class="meditation-btn" data-type="mindfulness">Mindfulness</button>
                     <button class="meditation-btn" data-type="breath">Breath Awareness</button>
                     <button class="meditation-btn" data-type="mantra">Mantra-based</button>
                     <button class="meditation-btn" data-type="transcendental">Transcendental</button>
-                    <button class="meditation-btn" data-type="love">Love & Kindness</button>
+                    <button class="meditation-btn" data-type="love">Loving-kindness</button>
                     <button class="meditation-btn" data-type="body">Body Scan</button>
                 </div>
                 <!-- Hidden container for the image and list -->
                 <div id="meditation-content">
-                    <img id="meditation-image" src="to-be-filled" alt="Meditation type">
+                    <figure id="meditation-image-container">
+                        <img id="meditation-image" src="to-be-filled" alt="Meditation type">
+                        <figcaption id="meditation-caption"></figcaption>
+                    </figure>
                     <div id="meditation-steps">
                         <ol>
                             <li>First step</li>
@@ -344,7 +380,7 @@
         </section>
 
         <section class="section-content" id="where">
-            <h2 class="section-title">Where should you meditate?</h2>
+            <h2 id="where-title" class="section-title">Where should you meditate?</h2>
             <div id="slideshow-wrapper">
                 <figure id="slideshow-container-1">
                     <img id="slideshow-img-1" src="images/bedroom.jpg">
@@ -443,8 +479,115 @@
             setInterval(() => {
                 slideshows.forEach(nextImage);
             }, 9000); // images change every 3 sec
+
+            const meditationData = {
+                "mindfulness": {
+                    image: "images/mind.jpg",
+                    steps: [
+                        "Find a quiet place and sit comfortably.",
+                        "Focus on your breath as it moves in and out. Keep your breath as consistent as possible.",
+                        "Then, focus on your senses. What do you see? Hear? Smell? Observe your reaction.",
+                        "Bring your attention back to your breath.",
+                        "Repeat and continue this for at least 5-10 minutes."
+                    ],
+                    caption: "I like to do mindfulness meditation in nature and listen to the birds."
+                },
+                "breath": {
+                    image: "images/breath.jpg",
+                    steps: [
+                        "Sit comfortably with a straight back.",
+                        "Close your eyes and take a deep breath in through your nose.",
+                        "Hold your breath for a moment, then exhale slowly.",
+                        "Repeat while focusing on each breath.",
+                        "Continue for several minutes, gradually deepening your relaxation."
+                    ],
+                    caption: "Feeling your lungs expand and contract will help improve your breath awareness."
+                },
+                "mantra": {
+                    image: "images/mantra.jpg",
+                    steps: [
+                        "Choose a word or phrase to repeat.",
+                        "Find a quiet space, sit comfortably.",
+                        "Close your eyes and begin repeating the mantra softly or in your mind.",
+                        "Stay focused on the sound and rhythm of your mantra.",
+                        "If your mind wanders, gently return to the mantra."
+                    ],
+                    caption: "A person may perform mantra meditation with or without religious content."
+                },
+                "transcendental": {
+                    image: "images/transcend.jpg",
+                    steps: [
+                        "Sit comfortably with eyes closed.",
+                        "Silently repeat a specific mantra given by an instructor.",
+                        "Allow thoughts to come and go naturally.",
+                        "Continue for about 20 minutes.",
+                        "Gently bring your awareness back to the present moment."
+                    ],
+                    caption: "Transcendental meditation is the more spiritual than the other types here."
+                },
+                "love": {
+                    image: "images/love.jpg",
+                    steps: [
+                        "Call to mind things good things you have done.",,
+                        "Silently repeat phrases like 'May I be happy. May I be healthy.'",
+                        "Repeat steps 1 and 2, but for a loved one.",
+                        "Gradually extend these loving thoughts to yourself and others.",
+                        "Again, be kind to yourself when distracted. Try to avoid frustration."
+                    ],
+                    caption: "Mentally pat yourself on the back throughout loving-kindness meditation."
+                },
+                "body": {
+                    image: "images/body.jpg",
+                    steps: [
+                        "Lie down in a quiet and comfortable place.",
+                        "Close your eyes and take deep breaths.",
+                        "Bring your attention to your toes, noticing any sensations.",
+                        "Slowly move your awareness up through your body, relaxing each part.",
+                        "End by resting in full-body awareness and relaxation."
+                    ],
+                    caption: "I like doing body scan meditations on my bed to enhance relaxation."
+                }
+            };
+
+            // dynamically show respective images, steps, and captions on the "how" page
+            // when a meditation type button is clicked
+            $(".meditation-btn").click(function () {
+
+                $(".meditation-btn").removeClass("selected");
+                $(this).addClass("selected");
+
+                let type = $(this).data("type"); 
+
+                $("#meditation-image").attr("src", meditationData[type].image);
+
+                $("#meditation-caption").text(meditationData[type].caption);
+
+                // remove old list, show new one
+                $("#meditation-steps ol").empty();
+                meditationData[type].steps.forEach((step, index) => {
+                    $("#meditation-steps ol").append(`<li style="display: none;">${step}</li>`);
+                });
+
+                // dynamically style image, steps, and caption
+                $("#meditation-image").css({ "left": "-100%", "display": "block" });
+                $("#meditation-caption").css({ "opacity": "0" });
+                $("#meditation-steps").css({ "right": "-100%", "display": "block" });
+
+                // slide image on screen from left
+                $("#meditation-image").animate({ left: "0" }, 1500, function () {
+                    // fade in the figcaption after the image animation
+                    $("#meditation-caption").fadeTo(100, 1);
+                });
+
+                // slide steps from <ol> on screen from right
+                $("#meditation-steps").animate({ right: "0" }, 2000, function () {
+                    // do this sequentially
+                    $("#meditation-steps li").each(function (index) {
+                        $(this).delay(index * 700).fadeIn(750);
+                    });
+                });
+            });
         });
     </script>
-
 </body>
 </html>
