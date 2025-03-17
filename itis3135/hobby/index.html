@@ -17,7 +17,7 @@
             height: 100%;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #1a0e08, #a6644c);
+            background: linear-gradient(to bottom, #371d10, #5c3527);
             background-attachment: fixed;
         }
         main {
@@ -30,6 +30,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: #e7d4c2;
+            width: 250%;
         }
         nav {
             display: flex;
@@ -42,7 +44,7 @@
             height: 3px;  
             background-color: white; 
             width: 1100px;
-            margin-bottom: 0px;
+            margin-bottom: -8px;
             margin-top: -9px;
         }
         hr:first-child {
@@ -53,40 +55,62 @@
         }
         nav button {
             background-color: transparent;
-            color: #FEFCFB;
+            /* color: #bd927c; */
+            /* color: #ACD7EC; */
+            /* color: #afc6d7; */
+            /* color: #594A26; */
+            /* color: #786434; */
+            color: #917942;
             border: none;
             font-size: 1.2rem;
             text-decoration: underline;
             padding: 10px;
             font-weight: bold;
-            transition: transform 0.1s ease-in-out;
+            transition: transform 0.15s ease-in-out;
         }
         nav button:hover {
-            color: #aba8a4;
+            color: #564826;
             transform: scale(1.3)
         }
         footer {
             margin-top: 55px;
             text-align: center;
             padding-bottom: 14px;
+            background-color: #e7d4c2;
+            width: 250%;
         }
         footer a {
             margin-left: 6px;
             margin-right: 3px;
-            color: #FEFCFB;
+            color: #917942;
             font-weight: bold;
             font-size: 1.1rem;
+            transition: transform 0.1s ease-in-out;
         }
-
+        #about a {
+            color: #ef8f7a;
+        }
+        #about a:hover {
+            color: #ad5c4a;
+        }
         footer p {
-            color: #cbc9b0;
+            color: #5c3527;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
-        a:hover {
-            color: #aba8a4;
+        footer a:hover {
+            color: #ad5c4a;
+            transform: scale(1.3)
         }
         p {
             color: #cbc9b0;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+        }
+        figcaption {
+            font-family: Verdana, sans-serif;
+            font-size: 14px;
+            text-align: center;
+            color: #cbc9b0;
         }
         #what-text {
             font-size: 1.1rem;
@@ -95,21 +119,19 @@
         }
         #where-title {
             margin-top: 50px;
+            margin-right: 2px;
         }
         h1 {
-            color: #cbc9b0;
+            color: #5c3527;
             font-size: 3.7rem;
-            margin-bottom: 0px;
-            margin-top: 27px;
+            margin-bottom: -5px;
+            margin-top: 15px;
         }
         .section-title {
             color: #cbc9b0;
             text-align: center;
             font-size: 1.6rem;
         }   
-        #what-title {
-            margin-right: 2px;
-        }
         .section-content {
             display: none;
         }
@@ -121,6 +143,7 @@
             justify-content: space-evenly;
             align-items: center;
             width: 100%;
+
         }
         .tenor-gif-embed {
             width: 400px;
@@ -132,21 +155,21 @@
             min-width: 400px;
             height: auto;
             border: none;
-            margin-right: 41px;
+            margin-right: 44px;
             padding: 0;
             justify-content: center;
         }
-        ul {
+        #fact-box ul {
             margin-left: -15px;
             font-size: 16px;
             width: 90%;
         }
-        ul li {
+        #fact-box ul li {
             margin-bottom: 12px;
             color: #654c3f;
             margin-left: 5px;
         }
-        ul li:first-child {
+        #fact-box ul li:first-child {
             margin-top: 10px;
         }
         #gif-fig {
@@ -161,15 +184,12 @@
             top: 270px;
             left: 0px;
             width: 100%;
-            text-align: center;
-            color: #cbc9b0;
-            font-size: 15px;
         }
         #slideshow-wrapper {
             display: flex; 
             justify-content: center;  
             align-items: center;  
-            gap: 50px;
+            gap: 0px;
             margin-top: -10px;
         }
         figure img {
@@ -192,6 +212,7 @@
         .slide-caption {
             background-color: #cbc9b0;
             font-weight: bold;
+            padding: 5px;
         }
         #slideshow-caption-1 {
             color: rgb(19, 110, 19);
@@ -204,21 +225,20 @@
             text-align: left;
             margin-left: -27px;
             margin-top: -5px;
-            margin-bottom: 44px;
+            margin-bottom: -25px;
         }
         #how-title {
-            margin-top: 70px;
+            margin-top: -30px;
+            margin-bottom: 10px;
         }
-        #how-container {
-            padding-bottom: -300px;
-        }
+
         #meditation-buttons {
             background-color: #cbc9b0;
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-top: 40px;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
             border: 6px solid #412313;
             padding: 10px;
             border-radius: 20px;
@@ -251,34 +271,33 @@
             width: 120%;
             position: relative;
             height: 400px;
-            margin-bottom: -100px;
+            margin-bottom: -200px;
         }
         #meditation-image {
-            width: 380px;
+            width: 333px;
             height: auto;
             display: none;
             position: absolute;
-            top: 10px;
+            top: 20px;
+            margin-left: 17px;
         }
         #meditation-image-container {
             text-align: center;
-            font-size: 15px;
         }
         #meditation-caption {
-            width: 40%;
-            font-size: 15px;
+            width: 35%;
             color: #cbc9b0;
             opacity: 0; 
             transition: opacity 0.5s ease-in-out;
             position: absolute;
-            top: 270px;
-            left: 6px;
+            top: 247px;
+            left: 22.5px;
         }
         #meditation-steps {
             display: none;
             position: absolute;
             left: 360px;
-            top: 12px;
+            top: 6.5px;
             width: 45%;
             background-color: transparent;
         }
@@ -292,7 +311,146 @@
         #meditation-steps li {
             margin-bottom: 10px;
         }
-    
+        #why-title {
+            margin-top: 30px;
+            margin-bottom: -10px;
+        }
+        #why-images-div {
+            position: relative;
+            width: 100%;
+            height: 300px; 
+        }
+        .why-figure {
+            position: absolute;
+            width: 300px; 
+            text-align: center;
+            top: -10px;
+            opacity: 1;
+            left: -577px; 
+        }
+        .why-figure img {
+            width: 100%;
+            height: auto;
+        }
+        .why-figure figcaption {
+            text-align: center;
+            color: #cbc9b0;
+            font-size: 13px;
+        }
+        #why-figure-2 {
+            width: 270px;
+            top: -39px;
+        }
+        #brain-fig {
+            margin-top: -21.5px;
+        }
+        #why p {
+            font-size: 16px;
+            width: 900px;
+        }
+        #why-text-2 {
+            margin-bottom: -15px;
+            margin-top: 0px;
+        }
+        #schedule-table {
+            max-width: 1200px;
+            border-collapse: collapse;
+            background-color: #cbc9b0;
+            border: 4px solid #412313;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 20px 20px 45px rgba(0, 0, 0, 0.5);
+            margin-top: 30px;
+        }
+        #schedule-table td:first-child{
+            font-weight: bold;
+        }
+        #schedule-table th, 
+        #schedule-table td {
+            padding: 15px;
+            border: 2px solid #412313;
+            text-align: left;
+            font-size: 16px;
+            color: #412313;
+        }
+        #schedule-table th {
+            background: linear-gradient(to bottom, #42271a, #91523b);
+            color: #FEFCFB;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #schedule-table tbody tr:nth-child(odd) {
+            background-color: #e7d4c2;
+        }
+        #schedule-table tbody tr:nth-child(even) {
+            background-color: #d6bca2;
+        }
+        #schedule-table tbody tr:hover {
+            background-color: #b89a81;
+            transition: background-color 0.3s ease-in-out;
+        }
+        #schedule p {
+            margin-bottom: 20px;
+        }
+        #schedule img {
+            width: 600px;
+            height: auto;
+            opacity: 0;
+        }
+        #ai-prompts-container ul {
+            color: #cbc9b0;
+        }
+        #ai-prompts-container ul li {
+            opacity: 1;
+        }
+        #ai-prompts h2 {
+            margin-top: 55px;
+            margin-bottom: 45px;
+        }
+        #ai-prompts ul li {
+            margin-top: 20px;
+        }
+        #about-img-txt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-left: -20px;
+            width: 800px;
+            gap: 20px;
+        }
+        #about-img-txt img {
+            width: 290px;
+        }
+        #about-img-txt figcaption {
+            margin-left: 0px;
+        }
+        #about h2 {
+            margin-top: 50px;
+        }
+        #about-text-1 {
+            margin-left: 20px;
+        }
+        #text-2-container {
+            background-color: #e7d4c2;
+            padding: 3.5px 15px 3.5px 15px;
+            margin-bottom: 37.5px;
+        }
+        #text-2-container p {
+            margin-top: 20px;
+            color: #412313;
+        }
+        #schedule p {
+            margin-bottom: 15px;
+        }
+        #schedule h2 {
+            margin-top: 55px;
+            margin-bottom: -10px;
+        }
+        #about-title {
+            margin-top: -10px;
+        }
     </style>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -314,7 +472,6 @@
             <h2 class="divider">🧘</h2>
             <button class="nav-link" id="ai-prompts-btn" data-section="ai-prompts">AI Prompts</button>
         </nav>
-        <hr>
     </header>
 
     <main>
@@ -324,7 +481,7 @@
             <p id="what-text">Typical meditation does not entail sitting like a monk for hours on end in order to reach enlightenment. 
                 Meditation is hard to define because it comes in so many forms. I like to think of it as the deliberate 
                 exploration of your consciousness. Well, what is consciousness? Consciousness, to me, is the 
-                awareness of ones existence. So through meditation, you explore, observe, and can even change the ways in which your consciousness 
+                awareness of ones existence, and <strong><i>not</i></strong> your thoughts. So through meditation, you explore, observe, and can even change the ways in which your consciousness 
                 percieves both yourself and the world you exist in.</p>
             <div id="gif-facts-container">
                 <figure id="gif-fig">
@@ -333,18 +490,36 @@
                 </figure>
                 <div id="fact-box">
                     <ul>
-                        <li>You can practice meditation to relax, focus, improve your health, and more</li>
-                        <li>The practice of meditation is <strong>thousands</strong> of years old</li>
-                        <li>Science has a lot of catching up to do, as thorough research on meditation is only recent</li>
-                        <li>Meditation can be done in both religous and secular manners</li>
-                        <li>Meditation can change the literal structure of your brain</li>
+                        <li>You can practice meditation to relax, focus, improve your health, and more.</li>
+                        <li>The practice of meditation is <strong>thousands</strong> of years old.</li>
+                        <li>Science has a lot of catching up to do, as thorough research on meditation is only recent.</li>
+                        <li>Meditation can be done in both religous and secular manners.</li>
+                        <li>Meditation can change the literal structure of your brain.</li>
                     </ul>
                 </div>
             </div>
         </section>
  
         <section class="section-content" id="about">
-            <h2 class="section-title">About me</h2>
+            <h2 id="about-title" class="section-title">About me</h2>
+            <p id="about-text-1">My name is Erich Then, and I am a junior at UNC Charlotte studying the systems and networks concentration of computer science. 
+                I transferred from UCSD because I couldn't study CS and I didn't have the best time there. I've moved around <strong>a lot</strong> (8 states, 2 countries), 
+                and I went to high school in Kenya–which was awesome. I am passionate about teaching, programming, and of course, exploring my consciousness through meditation. 
+                Check out my <a href="https://webpages.charlotte.edu/ethen/itis3135/introduction.html"> introduction page</a> for a little more about me.</p>
+            <div id="about-img-txt">
+                <figure id="about-figure">
+                    <img src="images/me.jpg">
+                    <figcaption>Post meditation session at my favorite place in the world.</figcaption>
+                </figure>
+                <div id="text-2-container">
+                    <p>I, like all of us, have many stressors in my life. I wasn't good at dealing with them (like, at all). Then I discovered that I can train my mind to be less susceptible to the 
+                        not-so-great thoughts that come and go. I started really slow, and it was extremely hard to remain focused 
+                        while meditating (having ADHD does not help). I thought it wasn't for me. But it being so hard made me realize how much I needed it, so I persisted. It got a little bit easier each time, and I have since slowly gotten better
+                        at controlling my attention while dissaciating from my thoughts.  Do not get the impression that I am a guru or good at meditation.
+                        I am still a beginner, and I will be for a while. My outlook on life and personal wellbeing, however, has drastically improved. Thus, I am eager to share my experience and what I have learned when it comes to meditation.
+                    </p>
+                </div>
+            </div>
         </section>
         
         <section class="section-content" id="how">
@@ -397,197 +572,144 @@
         </section>
 
         <section class="section-content" id="why">
-            <h2 class="section-title">Cool. But why should I meditate?</h2>
+            <h2 class="section-title" id="why-title">Why should you meditate?</h2>
+            <p id="why-text-1">I commonly feel like my mind is uncontrollable–like a dog on a walk who just escaped their owners leash.
+                If your dog isn't trained, you'll likely pull out a treat or deperately call out for them to come back. 
+                Most of us, myself included, have a <strong>terrible</strong> grip on our leash, and we grow annoyed and frustrated because of it. Through consistent meditation, you tighten the grip. You might even become that arrogant dog owner
+                who makes sure everyone knows they don't need a leash. Not quite though, if you reach that level of control over your mind, I can personally guarantee that you won't be arrogant.
+            </p>
+            <div id="why-images-div">
+                <figure class="why-figure" id="why-figure-1">
+                    <img src="images/attention.jpg">
+                    <figcaption>Companies invest billions to hijack your thoughts and attention. Through meditation, you're not easy to hijack.</figcaption>
+                </figure>
+                <figure class="why-figure" id="why-figure-2">
+                    <img src="images/brain.png">
+                    <figcaption id="brain-fig">Like working out? Meditation is like taking your mind to the gym. How much can your mind bench, bro?</figcaption>
+                </figure>
+            </div>
+            <p id="why-text-2">
+                 You will learn to observe your thoughts without attaching yourself to them–you just watch them float on by like the images above. This is not easy, in fact it is very difficult. It's an uphill battle. 
+                 Many thoughts can be threatening, overwhelming, and manipulative. But what if they are just another successful fraud whose living it up...but dreading the day they get found out for 
+                 who they really are. You can crack that case if you try. 
+            </p>
+
         </section>
         
         <section class="section-content" id="schedule">
-            <h2 class="section-title">Meditation schedules</h2>
+            <h2 class="section-title">Meditation Schedule</h2>
+            
+            <p>In this section, I will outline the schedule that I currently follow below. Please keep in mind that I have been meditating for kind of a while now. Also, I do not always do everything in this schedule. When I began, I only did it for 5 minutes a day.
+                    So, if you are just starting out, pick a meditation you like and do it for 5-10 minutes either every day or every other day. I strongly reccomend taking those 5 minutes either right when you wake up or right before you sleep.
+            </p>
+            <figure>
+                <img id="schedule-image" src="images/bench.jpg">
+                <figcaption>It has been proven that getting sunlight early in the morning has numerous health benifits. That is why I usually do my morning gratitude meditation on a bench in the park area near my apartment. It really does improve the rest of my day.</figcaption>
+            </figure>
+
+            <table id="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Meditation</th>
+                        <th>Duration</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9:00 AM</td>
+                        <td>Gratitude Meditation</td>
+                        <td>5 minutes</td>
+                        <td>When I wake up, I take 5 minutes to let my mind wander about the ways in which I am grateful, and in my mind, I express gratitude to whatever comes up.</td>
+                    </tr>
+                    <tr>
+                        <td>6:00 PM</td>
+                        <td>Mindfulness</td>
+                        <td>10 minutes</td>
+                        <td>You don't have to be sitting to do mindfulness. Mindfulness is the complete focus on the present moment. So, I practice this on my bike ride home from school. Every time I start thinking about something else, I redirect my attention to my feet pedaling or something interesting I see outside.</td>
+                    </tr>
+                    <tr>
+                        <td>8:00 PM</td>
+                        <td>Box Breathing</td>
+                        <td>10 minutes</td>
+                        <td>I'll likely get stressed throughout my work, so I take a break and practice box breathing (inhale 5 seconds, hold for 5 seconds, exhale for 5 seconds, repeat) for 10 minutes. This helps calm me down and enhances my focus for the work to come.</td>
+                    </tr>
+                    <tr>
+                        <td>1:00 AM</td>
+                        <td>Body Scan</td>
+                        <td>10 minutes</td>
+                        <td>A proper body scan meditation is very relaxing. It is great to do while lying down in bed before sleep, so that's exactly what I do.</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
 
         <section class="section-content" id="ai-prompts">
             <h2 class="section-title">AI Prompts I used in the development of this page</h2>
+            <div id="ai-prompts-container">
+                <ul>
+                    <li>What is the data-section attribute, and how can I use it to only have one event listener for all of my nav buttons?</li>
+
+                    <li>This is good. We need to make sure the "what" section is the default section, the one that shows on page load. Right now, all of the sections are present on the page load.</li>
+
+                    <li>I got the section contents to fade in when their nav button is clicked, but how do I get home to fade in on a page load and reload?</li>
+
+                    <li>I tried to make sure the gif and the box containing the are the exact same height by setting both to a certain height, however they still aren't aligned. 
+                        It is very close to being aligned, but not quite there. This is beginning to annoy me because I have resorted to using margins, inching a tiny bit at a time, 
+                        but it seems the match I am looking must be to the hundredth of a single pixel apparently. Look at my code and tell me why their heights (or positions, or both) 
+                        are not the exact same. [Gave html and css to AI]</li>
+
+                    <li>Thank you. Now, I have 12 images in my images folder, and I have resized all of them to be the same size. I want to make 2 automatically progressing slideshows that 
+                        will be next to eachother in a row. There will be 6 images in each one. One image will be present on the screen at a time for each slideshow (so two images will be on the page 
+                        at a time). We will wrap the index of the images so once we get to the last image we go back to the first one. We also need to dynamically change the contents of the fig 
+                        caption element when the image changes so the caption matches the new image. Also, add a fading in and out effect for when the img and figcaption change. 
+                        I have set up the html, here it is: [gave my html]. Give me detailed steps on how to implement this in JS using Jquery. Then, give me all of the CSS that is needed to do so.</li>
+
+                    <li> -Ok. Now, there is something I want to fix. When I zoom in and out, the GIF and the facts container shift horizontally. Also, they are not centered on the screen even before I zoom in and out. Here is my code
+                        [gave code] please tell me why this is happening, and how to fix it.</li>
+
+                    <li>Before we continue, there is another issue. The pages look great on my laptop: the main content is in the middle of the screen, and the footer is at the bottom. However, on my monitor, a larger screen, 
+                        everything is near the top. The footer is in the middle of the screen, and the main content is in the first third or so of the screen, vertically speaking. Let's make it so regardless of how big or small the screen is, 
+                        the header is always at the top (this is already the case), the main content is in the middle, and the footer is at the bottom of the screen.</li>
+
+                    <li>I am making a page for types of meditation and how to do them. I want buttons to aligned in the center of the page when the page loads, and the buttons will all be in a row. 
+                        These buttons will be the different types of meditation. When a button is clicked, an ordered list and an image will slide on to the screen (we can use jquery for this animation) 
+                        and they will be located below the buttons. Below the buttons, the ordered list tag will be on the right, and the image will be on the left. 
+                        Thus, the image should slide onto the screen from the left, and the ordered list should slide onto the screen from the right. Also, the ordered list will slide in order, 
+                        i.e. the first step will slide onto the screen, then the second step will slide onto the screen a second after the first, and so on. 
+                        Here are the types of meditation I am doing: Mindfulness, Breath Awareness, Mantra-based, Transcendental, Love & Kindness, and Body Scan. 
+                        As for the contents of the ordered list, don't worry about it yet. You can simply put "first step" as the text for the first item, and so on. </li>
+
+                    <li>Can you tell me why the ol list is appearing unordered and why the list items are black when they have been styled to be a different color. Also, if a li item goes to a new line, it should not be at 
+                        the same horizontal position of the bullet point, it should be at the same horizontal position as the text in the above line. Here is my HTML: [snippet of html], here is my JS: [snippet of JS], and here is my CSS: [snippet of CSS]</li>
+
+                    <li>[gave a snippet of my JavaScript] The image slides from the left, but the list items do not. They do appear sequentially which is great, but I also want them to slide in from the right. 
+                        It seems the syntax is similar, so why aren't the list elements sliding in from the right? Instead, they are fading in</li>
+
+                    <li>On this page, I have two images that are next to each other in a row. They both are in figure elements, and they both have figcaptions under them. 
+                        I want the images and their captions to move across the screen continually. They will move horizontally, from left to right. 
+                        One can go first, and the other one can follow. When an image and a caption is completely off the screen on the right side 
+                        (meaning the left side of the image/caption is now off the screen), it will wrap and start again from the left. Here is my HTML for this page, 
+                        and in it you can see the images div and the two figures inside of it: [gave my HTML for this section]. Tell me how to do this and let's do it in steps.</li>
+
+                    <li>Ok, they are sliding. However, they need to go across the full screen, and they are stopping very early. It looks like they are stopping at the end of the #why-images-div, and not the full window. 
+                        They are also overlapping heavily. Here is the JS you gave me: [gave JS code]. Let's fix this to make sure that they do not overlap with each other, and that they go across the entire screen before they reset. </li>
+
+                    <li>Here is the html of the table I just made, and here is all of my css so far. [gave table html and css]. Use CSS to make this table look nice, and be sure to use the color 
+                        palette/themes I have done thus far that you see in the existing CSS. </li>
+                </ul>
+            </div>
         </section>
 
     </main>
 
     <footer>
-        <hr>
         <p>Designed and developed by<a class="org-link" href="../thenhedeveloped.org/">ThenHeDeveloped LLC.</a> ©2025</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script> 
-        $(document).ready(function () {
-            // hide sections on page load
-            $(".section-content").hide();
-
-            // fade in default on page load
-            $("#home").fadeIn(2500);
-
-            // section switching through nav bar with fade effect
-            $(".nav-link").click(function () {
-                let sectionToShow = $(this).attr("data-section");
-                $(".section-content").hide();
-                $("#" + sectionToShow).fadeIn(2500);
-            });
-
-            // slideshow functionality
-            let slideshows = [
-                {
-                    container: "#slideshow-container-1",
-                    imgElement: "#slideshow-img-1",
-                    captionElement: "#slideshow-caption-1",
-                    images: [
-                        { src: "images/bedroom.jpg", caption: "The comfort and familiarity of your bedroom is perfect for meditation." },
-                        { src: "images/beach.jpg", caption: "The beach is where I have had my most profoud meditations. If accessible, I highly reccomend." },
-                        { src: "images/retreat.jpg", caption: "Meditation can be more powerful with others, a retreat is the perfect opportunity for this." },
-                        { src: "images/church.jpg", caption: "If you're religious, establishments are a great choice for a good connection with self." },
-                        { src: "images/bed.jpg", caption: "Lot's of meditations require you to lie down. Get in your bed and meditate before you sleep!" },
-                        { src: "images/scenery.jpg", caption: "There is something powerful about your thoughts when you are overlooking beautiful scenery." }
-                    ],
-                    index: 0
-                },
-                {
-                    container: "#slideshow-container-2",
-                    imgElement: "#slideshow-img-2",
-                    captionElement: "#slideshow-caption-2",
-                    images: [
-                        { src: "images/city.jpg", caption: "Avoid loud chaotic environments like a bench on a city street, unless you want a challenge!" },
-                        { src: "images/office.jpg", caption: "The office. Not only do you have work to do, but there are too many distractions and stressors." },
-                        { src: "images/bear.jpg", caption: "Unsafe locations, such as a parks known for having bears. Not a good place to let your guard down!" },
-                        { src: "images/anxious.jpg", caption: "Avoid places that you have bad associations with. This can lead to counterproductive anxiety." },
-                        { src: "images/pickpocket.jpg", caption: "Watch out for crowds. While you're observing your thoughts, someone might be observing your wallet!"},
-                        { src: "images/sitting-street.jpg", caption: "Not that you were planning on it, but meditating in the middle of the steet isn't the brightest of ideas." }
-                    ],
-                    index: 0
-                }
-            ];
-
-            function nextImage(slideshow) {
-                slideshow.index = (slideshow.index + 1) % slideshow.images.length; // wrap around after last image
-
-                $(slideshow.imgElement).fadeOut(1000, function () {
-                    $(this).attr("src", slideshow.images[slideshow.index].src).fadeIn(1000);
-                });
-
-                $(slideshow.captionElement).fadeOut(1000, function () {
-                    $(this).text(slideshow.images[slideshow.index].caption).fadeIn(1000);
-                });
-            }
-
-            setInterval(() => {
-                slideshows.forEach(nextImage);
-            }, 9000); // images change every 3 sec
-
-            const meditationData = {
-                "mindfulness": {
-                    image: "images/mind.jpg",
-                    steps: [
-                        "Find a quiet place and sit comfortably.",
-                        "Focus on your breath as it moves in and out. Keep your breath as consistent as possible.",
-                        "Then, focus on your senses. What do you see? Hear? Smell? Observe your reaction.",
-                        "Bring your attention back to your breath.",
-                        "Repeat and continue this for at least 5-10 minutes."
-                    ],
-                    caption: "I like to do mindfulness meditation in nature and listen to the birds."
-                },
-                "breath": {
-                    image: "images/breath.jpg",
-                    steps: [
-                        "Sit comfortably with a straight back.",
-                        "Close your eyes and take a deep breath in through your nose.",
-                        "Hold your breath for a moment, then exhale slowly.",
-                        "Repeat while focusing on each breath.",
-                        "Continue for several minutes, gradually deepening your relaxation."
-                    ],
-                    caption: "Feeling your lungs expand and contract will help improve your breath awareness."
-                },
-                "mantra": {
-                    image: "images/mantra.jpg",
-                    steps: [
-                        "Choose a word or phrase to repeat.",
-                        "Find a quiet space, sit comfortably.",
-                        "Close your eyes and begin repeating the mantra softly or in your mind.",
-                        "Stay focused on the sound and rhythm of your mantra.",
-                        "If your mind wanders, gently return to the mantra."
-                    ],
-                    caption: "A person may perform mantra meditation with or without religious content."
-                },
-                "transcendental": {
-                    image: "images/transcend.jpg",
-                    steps: [
-                        "Sit comfortably with eyes closed.",
-                        "Silently repeat a specific mantra given by an instructor.",
-                        "Allow thoughts to come and go naturally.",
-                        "Continue for about 20 minutes.",
-                        "Gently bring your awareness back to the present moment."
-                    ],
-                    caption: "Transcendental meditation is the more spiritual than the other types here."
-                },
-                "love": {
-                    image: "images/love.jpg",
-                    steps: [
-                        "Call to mind things good things you have done.",,
-                        "Silently repeat phrases like 'May I be happy. May I be healthy.'",
-                        "Repeat steps 1 and 2, but for a loved one.",
-                        "Gradually extend these loving thoughts to yourself and others.",
-                        "Again, be kind to yourself when distracted. Try to avoid frustration."
-                    ],
-                    caption: "Mentally pat yourself on the back throughout loving-kindness meditation."
-                },
-                "body": {
-                    image: "images/body.jpg",
-                    steps: [
-                        "Lie down in a quiet and comfortable place.",
-                        "Close your eyes and take deep breaths.",
-                        "Bring your attention to your toes, noticing any sensations.",
-                        "Slowly move your awareness up through your body, relaxing each part.",
-                        "End by resting in full-body awareness and relaxation."
-                    ],
-                    caption: "I like doing body scan meditations on my bed to enhance relaxation."
-                }
-            };
-
-            // dynamically show respective images, steps, and captions on the "how" page
-            // when a meditation type button is clicked
-            $(".meditation-btn").click(function () {
-
-                $(".meditation-btn").removeClass("selected");
-                $(this).addClass("selected");
-
-                let type = $(this).data("type"); 
-
-                $("#meditation-image").attr("src", meditationData[type].image);
-
-                $("#meditation-caption").text(meditationData[type].caption);
-
-                // remove old list, show new one
-                $("#meditation-steps ol").empty();
-                meditationData[type].steps.forEach((step, index) => {
-                    $("#meditation-steps ol").append(`<li style="display: none;">${step}</li>`);
-                });
-
-                // dynamically style image, steps, and caption
-                $("#meditation-image").css({ "left": "-100%", "display": "block" });
-                $("#meditation-caption").css({ "opacity": "0" });
-                $("#meditation-steps").css({ "right": "-100%", "display": "block" });
-
-                // slide image on screen from left
-                $("#meditation-image").animate({ left: "0" }, 1500, function () {
-                    // fade in the figcaption after the image animation
-                    $("#meditation-caption").fadeTo(100, 1);
-                });
-
-                // slide steps from <ol> on screen from right
-                $("#meditation-steps").animate({ right: "0" }, 2000, function () {
-                    // do this sequentially
-                    $("#meditation-steps li").each(function (index) {
-                        $(this).delay(index * 700).fadeIn(750);
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="scripts/meditation.js"></script>
 </body>
 </html>
