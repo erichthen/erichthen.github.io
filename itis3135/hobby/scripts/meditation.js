@@ -38,7 +38,7 @@ $(document).ready(function () {
                 { src: "images/bear.jpg", caption: "Unsafe locations, such as a parks known for having bears. Not a good place to let your guard down!" },
                 { src: "images/anxious.jpg", caption: "Avoid places that you have bad associations with. This can lead to counterproductive anxiety." },
                 { src: "images/pickpocket.jpg", caption: "Watch out for crowds. While you're observing your thoughts, someone might be observing your wallet!"},
-                { src: "images/sitting-street.jpg", caption: "Not that you were planning on it, but meditating in the middle of the steet isn't the brightest of ideas." }
+                { src: "images/sitting-street.jpg", caption: "Not that you were planning on it, but meditating in the middle of the steet isn't the brightest idea." }
             ],
             index: 0
         }
@@ -56,9 +56,11 @@ $(document).ready(function () {
         });
     }
 
-    setInterval(() => {
-        slideshows.forEach(nextImage);
-    }, 9000); // images change every 3 sec
+    $("#where-btn").click(() => {
+        setInterval(() => {
+            slideshows.forEach(nextImage);
+        }, 9000); // images change every 9 sec
+    });
 
     const meditationData = {
         "mindfulness": {
@@ -84,7 +86,7 @@ $(document).ready(function () {
             caption: "Feeling your lungs expand and contract will help improve your breath awareness."
         },
         "mantra": {
-            image: "images/mantra.jpg",
+            image: "images/mantra.png",
             steps: [
                 "Choose a word or phrase to repeat.",
                 "Find a quiet space, sit comfortably with your back straight.",
@@ -99,11 +101,11 @@ $(document).ready(function () {
             steps: [
                 "Sit comfortably with your eyes closed and back straight.",
                 "Silently repeat a specific mantra given by an instructor.",
-                "Observe your thoughts, then gently focus back on the mantra.",
-                "Continue for about 20 minutes.",
+                "Gently return to the mantra when you get distracted.",
+                "Continue for about 15 minutes. ",
                 "Gently bring your awareness back to the present moment."
             ],
-            caption: "Transcendental meditation is the more spiritual than the other types here."
+            caption: "This is similar to mantra meditation, but more spiritually oriented."
         },
         "love": {
             image: "images/love.jpg",
@@ -169,36 +171,95 @@ $(document).ready(function () {
     });
 
     // moving images across the screen from left to right in the "why" page
-    function moveImage(figure, startDelay) {
+    function moveImage(figure, startDelay, resetLeft) {
         let speed = 40000; 
         let screenWidth = $(window).width();
         let figureWidth = $(figure).outerWidth();
-        let startPosition = -figureWidth * 2; // start to the left of the screen
+        let startPosition = -figureWidth * 2; 
         let endPosition = screenWidth + figureWidth; 
-
+    
         function animateFigure() {
-            $(figure).css({ left: startPosition }); // reset position to the left
-            $(figure).animate(
-                { left: endPosition },
-                speed,
-                "linear",
-                function () {
-                    animateFigure(); // restart at end
-                }
-            );
+            $(figure)
+                .stop(true, true) // Stop any ongoing animation
+                .css({ left: startPosition }) // Reset position before restarting animation
+                .animate(
+                    { left: endPosition },
+                    speed,
+                    "linear",
+                    function () {
+                        animateFigure(); // Restart when it reaches the end
+                    }
+                );
         }
-
+    
+        // Reset the position immediately before restarting animation
+        $(figure).stop(true, true).css({ left: resetLeft });
+    
         setTimeout(animateFigure, startDelay);
     }
-
-    moveImage("#why-figure-1", 0); 
-    moveImage("#why-figure-2", 11111); 
-
-    // slowly fade in the image with the bench in the sun on "schedule" page
-    $("#schedule-image").css("opacity", "0").fadeTo(5000, 1);
-
-    // do the same thing when schedule button is clicked
-    $("#schedule-btn").click(function () {
-        $("#schedule-image").css("opacity", "0").fadeTo(5000, 1);
+    
+    // Ensure animations reset and restart only when the "why" button is clicked
+    $("#why-btn").click(function () {
+        // Reset each image to different starting positions
+        moveImage("#why-figure-1", 0, "-577px");  // First image reset
+        moveImage("#why-figure-2", 11111, "-900px");  // Second image starts further left
     });
+
+    // fade the image on schedule page in longer than other contents are faded in
+    $("#schedule-btn").click(function () {
+        //reset opacity in case user is coming back to the page
+        $("#schedule-image").hide().css("opacity", "0").fadeTo(1500, 1);
+    });
+
+    function animateAboutPage() {
+        // Slide down #about-text-1
+        $("#about-text-1").hide().slideDown(1500);
+
+        // Slide left #text-2-container from the right
+        $("#text-2-container")
+            .css({ position: "relative", right: "-100%" })
+            .animate({ right: "0%" }, 2500);
+
+        // Slide right #about-figure from the left
+        $("#about-figure")
+            .css({ position: "relative", left: "-100%" })
+            .animate({ left: "0%" }, 2500);
+    }
+
+    // Run animation when page loads
+    animateAboutPage();
+
+    // Run animation when "About" button is clicked
+    $("#about-btn").click(function () {
+        animateAboutPage();
+    });
+    
+    function animateHomePage() {
+        // Slide down #what-text
+        $("#what-text").hide().slideDown(1700);
+
+        // Slide up #gif-facts-container
+        $("#gif-facts-container")
+            .css({ position: "relative", top: "500px" })
+            .animate({ top: "0px" }, 2700);
+    }
+
+    // Run animation when page loads
+    animateHomePage();
+
+    // Run animation when "Home" button is clicked
+    $("#home-btn").click(function () {
+        animateHomePage();
+    });
+
+    function animateSchedulePage() {
+        // Slide down all targeted elements
+        $("#schedule p, #schedule-table").hide().slideDown(1000);
+    }
+
+    // Run animation when "Schedule" button is clicked
+    $("#schedule-btn").click(function () {
+        animateSchedulePage();
+    });
+
 });
