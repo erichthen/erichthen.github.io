@@ -75,7 +75,7 @@ hr {
     margin-top: 20px;
     margin-bottom: 15px;
     display: block;
-    width: 75%;
+    width: 85%;
 }
 
 main {
@@ -326,6 +326,7 @@ form {
     box-shadow: 0 28px 35px rgba(0,0,0,0.1);
     margin-bottom: 50px;
     text-align: center;
+    margin-left: 9px;
 }
 
 form h3 {
