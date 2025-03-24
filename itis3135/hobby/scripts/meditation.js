@@ -110,7 +110,7 @@ $(document).ready(function () {
         "love": {
             image: "images/love.jpg",
             steps: [
-                "Call to mind things good things you have done.",,
+                "Call to mind the good things you have done for yourself and others.",,
                 "Silently repeat phrases like 'May I be happy. May I be healthy.'",
                 "Repeat steps 1 and 2, but for a loved one.",
                 "Gradually extend these loving thoughts to yourself and others.",
