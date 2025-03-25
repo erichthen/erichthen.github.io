@@ -14,73 +14,83 @@
     <div data-include="components/header.html"></div>
     
     <main>
-        <h2 id="evaluations-title">Form</h2>
+        <h2 id="evaluations-title">HTML Form - Whimsical Company</h2>
 
-        <form action="#" method="post">
+        <div id="form-container">
+            <form action="#" method="post">
 
-			<label id="name-label" for="name">Name</label>
-			<input type="text" id="name" name="name" required placeholder="Your full name" size="50">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your full name" size="50">
+    
+                <label id="phone-label" for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890" size="50">
+    
+                <label id="email-label" for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="example@email.com" size="50">
 
-			<label id="phone-label" for="phone">Phone Number</label>
-			<input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890" size="50">
-
-			<label id="email-label" for="email">Email Address</label>
-			<input type="email" id="email" name="email" required placeholder="example@email.com" size="50">
-
-            <label id="checkbox-text">Select what applies to you</label>
-            
-			<div class="checkbox-group">
-                <label>
-                    <input type="checkbox" name="transactions"> Website will have transactions
-                </label>
-                <label>
-                    <input type="checkbox" name="backend"> Backend needed
-                </label>
-                <label>
-                    <input type="checkbox" name="authentication"> Needs user authentication
-                </label>
-                <label>
-                    <input type="checkbox" name="multipage"> Multiple page website
-                </label>
-                <label>
-                    <input type="checkbox" name="emails"> Needs automated emails
-                </label>
-                <label>
-                    <input type="checkbox" name="database"> Website needs a database
-                </label>
-            </div>
-            <!-- <p id="radio-text"><strong>Select a timeframe for the development of your website. Note that prices vary.</strong></p> -->
-            <label id="radio-text">Select a timeframe for the development of your website. Note that prices vary.</label>
-            <div class="radio-group">
-                <label>
-                    <input type="radio" name="timeframe" value="1-2-days"> 1-2 days
-                </label>
-                <label>
-                    <input type="radio" name="timeframe" value="3-5-days"> 3-5 days
-                </label>
-                <label>
-                    <input type="radio" name="timeframe" value="1-week"> 1 week
-                </label>
-                <label>
-                    <input type="radio" name="timeframe" value="more-than-1-week"> More than 1 week
-                </label>
-            </div>
-			<label for="website-type">What type of website will this be?</label>
-			<select id="website-type" name="website-type" required>
-				<option value="" disabled selected>Select an option</option>
-				<option value="personal-portfolio">Personal portfolio</option>
-				<option value="small-business-transactions">Small business with transactions</option>
-				<option value="small-page-no-transactions">Small page without transactions</option>
-				<option value="large-company">Large Company</option>
-				<option value="forum">Forum</option>
-				<option value="marketplace">Marketplace</option>
-			</select><br>
-            <div class="button-container">
-                <input type="reset" value="Reset">
-                <input type="submit" value="Submit">
-            </div>
-            
-		</form>
+                <label id="describe-label" for="further-details">Please describe the website you want us to develop:</label>
+                <textarea id="describe" placeholder="What is the purpose of it? Who will use it? etc." style="width: 333px; height: 100px;"></textarea>
+    
+                <label id="checkbox-text">Select what applies to you</label>
+                
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="transactions"> Website will have transactions
+                    </label>
+                    <label>
+                        <input type="checkbox" name="backend"> Backend needed
+                    </label>
+                    <label>
+                        <input type="checkbox" name="authentication"> Needs user authentication
+                    </label>
+                    <label>
+                        <input type="checkbox" name="multipage"> Multiple page website
+                    </label>
+                    <label>
+                        <input type="checkbox" name="emails"> Needs automated emails
+                    </label>
+                    <label>
+                        <input type="checkbox" name="database"> Website needs a database
+                    </label>
+                </div>
+                <label id="design-label" for="design-instructions">Please describe the design you are aiming for:</label>
+                <textarea id="design-instructions" placeholder="Colors, simplicity, headers/footers, etc." style="width: 333px; height: 100px;"></textarea>
+                <!-- <p id="radio-text"><strong>Select a timeframe for the development of your website. Note that prices vary.</strong></p> -->
+                <label id="radio-text">Select a timeframe for the development of your website. Note that prices vary.</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="timeframe" value="1-2-days"> 1-2 days
+                    </label>
+                    <label>
+                        <input type="radio" name="timeframe" value="3-5-days"> 3-5 days
+                    </label>
+                    <label>
+                        <input type="radio" name="timeframe" value="1-week"> 1 week
+                    </label>
+                    <label>
+                        <input type="radio" name="timeframe" value="more-than-1-week"> More than 1 week
+                    </label>
+                </div>
+                <label for="website-type">What type of website will this be?</label>
+                <select id="website-type" name="website-type" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="personal-portfolio">Personal portfolio</option>
+                    <option value="small-business-transactions">Small business with transactions</option>
+                    <option value="small-page-no-transactions">Small page without transactions</option>
+                    <option value="large-company">Large Company</option>
+                    <option value="forum">Forum</option>
+                    <option value="marketplace">Marketplace</option>
+                </select><br>
+                <label id="further-details-label" for="further-details">Any questions, comments, or details you would like to share?</label>
+                <textarea id="further-details" placeholder="Let us know..." style="width: 333px; height: 100px;"></textarea>
+                <div class="button-container">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </div>
+                
+            </form>
+        </div>
+        
        
     </main>
 

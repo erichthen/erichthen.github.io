@@ -15,9 +15,14 @@ body {
 }
 
 #greeting-img {
-    width: 70vh;
     margin-bottom: 70px;
     border: 5px solid #474448;
+}
+
+#greeting-img-container {   
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 h2, h3 {
@@ -28,6 +33,7 @@ h1 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 3rem;
     margin-top: -10px;
+    text-align: center;
 }
 
 #title-text {
@@ -278,6 +284,7 @@ header p {
 
 #table-container {
     margin-right: 190px;
+    margin-bottom: 50px;
 }
 
 #data-and-simple {
@@ -294,26 +301,31 @@ header p {
 }
 
 #complex-fig {
-    margin-bottom: 33px;
+    margin-bottom: 10px;
+    margin-top: -10px;
     margin-right: -175px;
 }
 
 #simple-header {
-    margin-top: 67px;
+    margin-top: 40px;
 
 }
 
 #complex-header {
     margin-right: -175px;
-    margin-top: 67px;
+    margin-top: 40px;
 }
 
 .sales-cell {
-    background-color: #dad9d9 !important;
+    background-color: #dad9d9;
 }
 
 .hr-cell {
-    background-color: #ffffff !important;
+    background-color: #ffffff;
+}
+
+#form-container {
+    width: 90%;
 }
 
 form {
@@ -321,18 +333,11 @@ form {
     border: 3px solid black;
     border-radius: 8px;
     padding: 20px;
-    width: 85%;
     max-width: 600px;
     box-shadow: 0 28px 35px rgba(0,0,0,0.1);
     margin-bottom: 50px;
     text-align: center;
     margin-left: 9px;
-}
-
-form h3 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 15px;
 }
 
 /* Label styling */
@@ -370,13 +375,11 @@ form textarea {
 
 .checkbox-group {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr); /* 3 columns */
-	gap: 10px 20px; /* row and column spacing */
-	max-width: 600px; /* optional for layout control */
-    margin-bottom: 50px;
-    text-align: left;
-    margin-left: 10px;
-
+	grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    gap: 0px 10px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-left: 40px;
 }
 
 .checkbox-group label {
@@ -385,17 +388,13 @@ form textarea {
 	gap: 8px;
 }
 
-.checkbox-group input[type="checkbox"] {
-    margin-right: 10px;
-}
-
 .radio-group {
     margin-bottom: 50px;
     display: flex;
 	flex-wrap: wrap; /* allows wrapping on smaller screens */
 	gap: 20px;        /* spacing between each radio+label */
 	align-items: center;
-    margin-left: 37px;
+    margin-left: 28px;
 }
 
 
@@ -444,8 +443,28 @@ input[type="submit"]:focus, input[type="reset"]:focus {
     margin-top: 30px;
 }
 
+#radio-text {
+    width: 70%;
+    text-align: center;
+    margin-left: 77px;
+}
 
+#website-type {
+    margin-bottom: 30px;
+}
 
+#further-details-label {
+    width: 70%;
+    margin-left: 79px;
+}
+
+#describe-label {
+    margin-top: 40px;
+}
+
+#design-instructions {
+    margin-bottom: 5px;
+}
 
 /*media queries for tablets*/
 
@@ -456,9 +475,9 @@ input[type="submit"]:focus, input[type="reset"]:focus {
         min-height: auto;
     }
 
-    h1 {
+    /* h1 {
         font-size: 2.5rem;
-    }
+    } */
 
     #title-text {
         font-size: 40px;
@@ -485,10 +504,10 @@ input[type="submit"]:focus, input[type="reset"]:focus {
         align-items: flex-start;
     }
 
-    h1 {
+    /* h1 {
         font-size: 2rem;
         text-align: center;
-    }
+    } */
 
     #title-text {
         font-size: 32px;
