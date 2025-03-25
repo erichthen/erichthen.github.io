@@ -13,28 +13,257 @@
 
     <div data-include="components/header.html"></div>
     
+    
     <main>
-        <h2 id="project-overview-title">Client Project Overview</h2>
-        <div id="client-project-container">
-
-            <div id="project-overview-container">
-                <h3 id="name-of-project">KBT Reading Support - Project Overview</h3>
-                <p>This application will serve a small tutoring business for kids with dsylexia. The purpose of this application is to serve as a portal for the owner as well as the parents of the students.</p>
-                <p>The intended users of this website are the owner and the parents, not the children.</p>
-                <p>The content of the website will include a calendar of a parent or the owners sessions for that month. Additionally, there will be options to send or view an invoice, cancel or reschedule one or all sessions, 
-                    write and view session notes, email the owner or email a parent, join the zoom session, and add or remove a client. The parents and the owner will have a different dashboard. 
-                </p>
-                <h3 id="client-information-title">Client Information</h3>
-                <ul>
-                    <li><strong>Name: </strong>Kelli Then</li>
-                    <li><strong>Business the client is associated with: </strong>KBT Reading Support LLC.</li>
-                    <li><strong>Email address: </strong>[private]</li>
-                    <li><strong>Phone Number: </strong>[private]</li>
-                </ul>
-            </div>
-
+        <div id="project-overview-container">
             
+            <h2 id="project-overview-title">Client Project Overview</h2>
+
+            <h3 id="name-of-project">KBT Reading Support - Project Overview</h3>
+            <p>This application will serve my mother's tutoring business for kids with dyslexia. The purpose of this application is to serve as a portal for the owner as well as the parents of the students. The intended users of this website are the owner and the parents, not the children.</p>
+            <p>The content of the website will include a calendar of a parent or the owner's sessions for that month. Additionally, there will be options to send or view an invoice, cancel or reschedule one or all sessions, 
+                write and view session notes, email the owner or email a parent, join the Zoom session, and add or remove a client. The parents and the owner will have a different dashboard. 
+            </p>
+
+            <hr>
+
+            <h3 id="client-information-title">Client Information</h3>
+            <ul>
+                <li><strong>Name: </strong>Kelli Then</li>
+                <li><strong>Business the client is associated with: </strong>KBT Reading Support LLC.</li>
+                <li><strong>Email address: </strong>[private]</li>
+                <li><strong>Phone Number: </strong>[private]</li>
+            </ul>
+
+            <hr>
+
+            <h3 id="wireframe-title">Wireframe of default page - Owners dashboard</h3>
+            <a href="https://drive.google.com/file/d/1hrm5DSu_DplQ8kJNbrx7SxvgHJLghrSx/view?usp=sharing">Link to wireframe</a>
+            <figure>
+                <img id="wireframe-img" src="images/wireframe.png" alt="design layout of admin page">
+                <figcaption>Owners dashboard, may move section buttons to the header.</figcaption>
+            </figure>
+
+            <hr>
+
+            <h3 id="map-title">Site Map</h3>
+            <a href="https://drive.google.com/file/d/1OC-70S_MIuq8_-t-4SemhLhplAgBl6uA/view?usp=sharing">Link to site map</a>
+            <figure>
+                <img id="map-img" src="images/site_map.png" alt="site map">
+                <figcaption>This is the planned structure for the web app.</figcaption>
+            </figure>
+
+            <hr>
+
+            <h3 id="page-design-title">Page-by-page Design</h3>
+            
+            <ol>
+                <li><strong>Name: Registration Page</strong></li>
+                <li><strong>Purpose: </strong>For parents who receive an invite email to register as a user, schedule their sessions, and receive login credentials.</li>
+                <li><strong>Intended Users: </strong>Parents/Clients</li>
+                <li><strong>Content: </strong>Page title, and a form where the user is asked to provide information so they can be registered and authenticated.</li>
+                <li><strong>Data entry: </strong>The data the user will enter on this page is their name, email, child's name, desired password, and day and time of their sessions.</li>
+                <li><strong>Data field validation: </strong>The email needs to be validated, the password needs to meet criteria (e.g. length, numbers & special characters), 
+                    the date needs to be available.
+                </li>
+                <li><strong>Buttons/Hyperlinks/Dropdowns: </strong>There will be a submit button, a link to a time zone converter, and a dropdown for dates.</li>
+                <li><strong>Actions: </strong>When the user presses the submit button, the data they entered will be stored in a database, then the user will be directed to the login page.</li>
+                <li><strong>Special notes: </strong>This might be broken into multiple pages to make things less lengthy.</li>
+            </ol>
+
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+            <ol>
+                <li><strong>Name: Login Page</strong></li>
+                <li><strong>Purpose: </strong>For all users of the website to log in or reset their password–only admin and registered parents will be able to log in.</li>
+                <li><strong>Intended Users: </strong>Parents/Clients</li>
+                <li><strong>Content: </strong>Page title, two fields: email and password, a login button, and a forgot password button/link.</li>
+                <li><strong>Data entry: </strong>The data the user will enter on this page is their email and password. 
+                    On the forgot password form, the user will enter their email.</li>
+                <li><strong>Data field validation: </strong>The email will have an email validation, the password needs to be validated/correct for the user, 
+                    the email for the forgot password needs to exist and already have an associated account.</li>
+                <li><strong>Buttons/Hyperlinks/Dropdowns: </strong>There will be a login button, a forgot password link, and a send password reset email button.</li>
+                <li><strong>Actions: </strong>When the user clicks login, their information will be searched and retrieved from the database. The user will be identified as either a 
+                    client or the admin, and be navigated to the respective dashboard. When the forgot password button is pressed, the email will be validated, searched and retrieved 
+                    by the database. If it matches an account, an automated email will be sent to the user to reset their password.
+                </li>
+                <li><strong>Special notes: </strong>This, or the about us, will likely serve as the root page (index) of the website.</li>
+            </ol>
+
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+            <ol>
+                <li><strong>Name: About Us</strong></li>
+                <li><strong>Purpose: </strong>For anyone–registered or not–to learn more about the tutoring business that the website is built for.</li>
+                <li><strong>Intended Users: </strong>Anyone</li>
+                <li><strong>Content: </strong>Page title, an image or two, paragraphs about the business, contact information, and an interest form.</li>
+                <li><strong>Data entry: </strong>In the interest form, the user will enter their name, email, phone number, and an optional message.</li>
+                <li><strong>Data field validation: </strong>The email and phone number need to be validated.</li>
+                <li><strong>Buttons/Hyperlinks/Dropdowns: </strong>The interest form will have a submit button.</li>
+                <li><strong>Actions: </strong>When the user presses the submit button on the interest form, an automated email will be sent to the owner containing the information 
+                    the user entered and a link for the owner to add that client/send them a registration email.
+                </li>
+                <li><strong>Special notes: </strong>This page, or the login page, will serve as the root (index) of the website.</li>
+            </ol>
+
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+            <ol>
+                <li><strong>Name: Admin Dashboard</strong></li>
+                <li><strong>Purpose: </strong>This page will serve as the main dashboard/interface for the owner to carry out operations and view their schedule.</li>
+                <li><strong>Intended Users: </strong>Owner/Admin</li>
+                <li><strong>Content: </strong>Shared header and footer, page title, a calendar containing their session schedule, and links/buttons for different operation which 
+                    will most likely be in the header.
+                </li>
+                <li><strong>Data entry: </strong>No data entry on this page.</li>
+                <li><strong>Data field validation: </strong>N/A</li>
+                <li><strong>Buttons/Hyperlinks/Dropdowns: </strong>Admin can click on a highlighted day on the calendar, logout button, buttons for the different operations 
+                    (adding client, rescheduling/canceling, sending an invoice, etc.) that will take admin to different pages.
+                </li>
+                <li><strong>Actions: </strong>When admin clicks on a day, the time of the sessions will pop up, as well as the names of the children. Logout button will log admin out. 
+                    When user clicks an operation, they will be navigated to the respective page.
+                </li>
+                <li><strong>Special notes: </strong>N/A</li>
+            </ol>
+
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+            
+            <ol>
+                <li><strong>Name: Client Dashboard</strong></li>
+                <li><strong>Purpose: </strong>This page will serve as the main dashboard/interface for the parents to carry out operations and view their schedule.</li>
+                <li><strong>Intended Users: </strong>Parent/Client</li>
+                <li><strong>Content: </strong>Shared header and footer, title, a calendar containing their session schedule, and links/buttons for different operations 
+                    which will most likely be in the header.
+                </li>
+                <li><strong>Data entry: </strong>No data entry on this page.</li>
+                <li><strong>Data field validation: </strong>N/A</li>
+                <li><strong>Buttons/Hyperlinks/Dropdowns: </strong>The user can click on a highlighted day on the calendar, logout button, buttons for the different operations 
+                    (rescheduling/canceling, viewing an invoice, etc.) that will take user to different pages.
+                </li>
+                <li><strong>Actions: </strong>When the user clicks on a day, the time of the sessions will pop up, as well as the names of the children. Logout button will log admin out. 
+                    When user clicks an operation, they will be navigated to the respective page.
+                </li>
+                <li><strong>Special notes: </strong>N/A</li>
+            </ol>
+
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+            <ol>
+                <li><strong>Name: Message Owner/Message a client</strong></li>
+                <li><strong>Purpose: </strong>This page will have two versions: one for client and one for owner. It will serve as a means to communicate 
+                    between owner and client and see messages.
+                </li>
+                <li><strong>Intended Users: </strong>Parent/Client and Owner/Admin</li>
+                <li><strong>Content: </strong>Shared header and footer, page title, a form to fill out, and recent messages.</li>
+                <li><strong>Data entry: </strong>The parent or admin will enter a subject and a body which will be sent to the admin or client.</li>
+                <li><strong>Data field validation: </strong>I will validate the above fields with type set to "text".</li>
+                <li><strong>Buttons/Hyperlinks/Dropdowns: </strong>The user will view recent messages with a dropdown/toggle button, there will be a "Send" button to send the message.</li>
+                <li><strong>Actions: </strong>When the user clicks the view messages toggle/dropdown, recent messages will appear. When user hits the send button, the data will be processed and 
+                    an automated email will be sent containing the message. Additionally, they will now see their message in the recent messages section.
+                </li>
+                <li><strong>Special notes: </strong>N/A</li>
+            </ol>
+
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+            <ol>
+                <li><strong>Name: Send invoice</strong></li>
+                <li><strong>Purpose: </strong>This page will allow the owner to send out an invoice to a client.</li>
+                <li><strong>Intended Users: </strong>Owner/Admin</li>
+                <li><strong>Content: </strong>Shared header and footer, page title, and a form to fill out.</li>
+                <li><strong>Data entry: </strong>The owner will select the recipient parent, upload the invoice, and add an optional message.</li>
+                <li><strong>Data field validation: </strong>I will validate the file ensuring a PDF format, as well as the optional message using type set to "text".</li>
+                <li><strong>Buttons/Hyperlinks/Dropdowns: </strong>The owner will select the recipient from a dropdown, there will also be buttons to upload the file and send the invoice.</li>
+                <li><strong>Actions: </strong>When the user clicks upload, they will choose a file from their system. When the user hits send, the data will be processed and an 
+                    automated email will be sent to the selected parent containing the invoice and the message if present.
+                </li>
+                <li><strong>Special notes (IMPORTANT): </strong>I have slightly deviated from the site map–the user will not have a view invoices page. 
+                    They will instead receive an email with the invoice.
+                </li>
+            </ol>
+
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+            <ol>
+                <li><strong>Name: Cancel/Reschedule</strong></li>
+                <li><strong>Purpose: </strong>This page will have two versions–one for owner and one for parents. It will allow the users to cancel or reschedule one or all sessions.</li>
+                <li><strong>Intended Users: </strong>Owner/Admin and Client/Parent</li>
+                <li><strong>Content: </strong>Shared header and footer, page title, buttons for the various scheduling options, and forms for the respective operations.</li>
+                <li><strong>Data entry: </strong>Most of it will be selecting data, not entering it. Though clients have to provide a message if they are canceling.</li>
+                <li><strong>Data field validation: </strong>I will validate the cancel message as type set to text and validate data so it only shows available slots.</li>
+                <li><strong>Buttons/Hyperlinks/Dropdowns: </strong>There will be buttons to select whether one wants to cancel or reschedule, and one session or all sessions. 
+                    There will be dropdowns for: Owner to select which parent will be canceled or rescheduled, owner to select the session or sessions, client to 
+                    select which session/sessions to cancel or reschedule. There will also be a button to confirm the change in schedule.
+                </li>
+                <li><strong>Actions: </strong>The cancel or reschedule and one or all sessions buttons will control what is on the screen. Data is processed such that only available slots are shown, 
+                    and only sessions of that client show when choosing the session to cancel or reschedule. The confirm button will look up the session in the database and apply the requested operation.
+                </li>
+                <li><strong>Special notes (IMPORTANT): </strong>I have slightly deviated from the site map, I am combining cancel and reschedule into one page. 
+                    Client and owner will still have their own versions.
+                </li>
+            </ol>
+
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+            <ol>
+                <li><strong>Name: Join Zoom</strong></li>
+                <li><strong>Special notes (IMPORTANT): </strong>Change from site-map: this doesn't need a page. It will be a button in the parent and owner dashboards.</li>
+            </ol>
+
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+            <ol>
+                <li><strong>Name: Session Notes</strong></li>
+                <li><strong>Purpose: </strong>This page will allow the owner to write notes about a session.</li>
+                <li><strong>Intended Users: </strong>Owner/Admin</li>
+                <li><strong>Content: </strong>This page will consist of two dropdowns: one to select the client and one to select the desired session of the client to write notes about.
+                    The notes will display if they are already written for that session, otherwise there will be a textbox and a submit button. 
+                </li>
+                <li><strong>Data entry: </strong>The data entry will be the textbox to write the session notes.</li>
+                <li><strong>Data field validation: </strong>The session notes will be validated as type set to text, as well as validated that text exists. The dropdown options 
+                    will be validated such that they only display past sessions for the specified client.
+                </li>
+                <li><strong>Buttons/Hyperlinks/Dropdowns: </strong>There will be dropdowns as mentioned in point number 4. There will be a button to submit the notes.</li>
+                <li><strong>Actions: </strong> When the first dropdown has been selected, the second dropdown will display sessions of only the client selected in the first dropdown. 
+                    When the notes are written and the submit button is pressed, the data will be stored so the owner can see it in the future, and an automated email containing the message
+                    will be sent to the selected client.
+                 </li>
+                <li><strong>Special notes (IMPORTANT): </strong>This page will actually only be for the owner, as the client can view the notes in an email.</li>
+            </ol>
+
+            <hr>
+            
+            <h3 id="functionality-title">Dynamic Functionality</h3>
+            
+            <p>
+                To begin, there will be forms across the website. Namely, forms on the cancel and reschedule page, on the message page, invoice page, session note page, etc. These forms
+                will have interactive dropdowns that filter data and display them as options, such as showing the sessions for one specific client on the session notes page. This 
+                functionality would be something similar to the <a class="interactive-link" href="/itis3135/forms.html">form page of this website</a>. The purpose of this functionality is to consolidate the 
+                    collection of data from the user in an organized manner. 
+                <br>
+                <br>
+                Additionally, both dashboards will have an interactive calendar, where one can click on a day that contains a session and see information about that session in a pop-up window. 
+                This is something that will be similar to <a class="interactive-link" href="https://workspace.google.com/intl/en-US/products/calendar/">Google Calendar</a>. 
+                There will be automated emails that come with some of the operations, such as on the invoice page, message and notes pages, etc. Clients who are invited will receive an invitation email
+                that will lead them to the registration page. Data will be dynamically extracted and put into the email. There will also be session reminder emails. An example of a site that 
+                uses automated emails heavily is <a class="interactive-link" href="https://canvas.instructure.com/login/canvas">Canvas</a>. The purpose of this is to display the schedule of the user in a more suitable way
+                than just text.
+                <br>
+                <br>
+                Most of the functionality and interactivity will be in the form of database operations. For example, the database will retrieve only the time slots that are available in the registration and reschedule pages. 
+                The database will include clients and their information, scheduled sessions, and messages as well as session notes. This data will be dynamically adjusted in the cancel/reschedule page, 
+                message and session note pages, etc. There are a plethora of websites that work with a database, such as the Canvas site mentioned above. The purpose of the database is it is necessary in order to keep track
+                of the things the site owner needs to keep track of.
+                <br>
+                <br>
+                I will most likely add interactive images to the about page. This could be either in the form of a slideshow, an image that changes when you hover over it, an image that moves around, etc. An 
+                example of a site that has images with multiple types of interactivity is <a class="interactive-link" href="https://www.tonyrobbins.com/">tonyrobins.com</a>. The purpose of this is to 
+                make the website more engaging and appealing. 
+            </p>
+
+
         </div>
+
     </main>
 
     <div data-include="components/footer.html"></div>

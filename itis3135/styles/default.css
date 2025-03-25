@@ -74,14 +74,14 @@ header {
     margin-top: 50px;
 }
 
-hr {
+header hr {
     border: none;
-    height: 2px;  /* Adjust thickness */
+    height: 3px;  /* Adjust thickness */
     background-color: black; /* Change color if needed */
     margin-top: 20px;
     margin-bottom: 15px;
     display: block;
-    width: 85%;
+    width: 90%;
 }
 
 main {
@@ -97,7 +97,7 @@ nav {
 
 footer {
     margin-top: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #designed-by-container {
@@ -466,6 +466,63 @@ input[type="submit"]:focus, input[type="reset"]:focus {
     margin-bottom: 5px;
 }
 
+#wireframe-img {
+    width: 130%;
+    max-width: none;
+    margin-left: -69px;
+}
+
+#map-img {
+    width: 130%;
+    max-width: none;
+    margin-left: -69px;
+}
+
+#project-overview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+#project-overview-container a {
+    font-size: 17px;
+    margin-top: -20px;
+}
+
+#project-overview-title {
+    margin-top: 50px;
+}
+
+#client-information-title {
+    margin-bottom: 0px;
+}
+
+#project-overview-container hr {
+    border: none;
+    height: 1px;  /* Adjust thickness */
+    background-color: black; /* Change color if needed */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    display: block;
+    width: 95%;
+}
+
+#functionality-title {
+    margin-bottom: 0px;
+}
+
+#project-overview-container p:last-child {
+    margin-bottom: 50px;
+}
+
+.interactive-link {
+    margin-left: -19px;
+    color: #3C4F76;
+    margin-right: -19px;
+}
 /*media queries for tablets*/
 
 @media (max-width: 1023px) {
