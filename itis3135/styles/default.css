@@ -487,6 +487,11 @@ input[type="submit"]:focus, input[type="reset"]:focus {
     max-width: 900px;
 }
 
+#project-overview-container p {
+    text-align: left;
+    width: 100%;
+}
+
 #project-overview-container a {
     font-size: 17px;
     margin-top: -20px;
