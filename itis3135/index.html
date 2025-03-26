@@ -23,6 +23,35 @@
 	<div data-include="components/footer.html"></div>
 
 	<script src="scripts/HTMLInclude.min.js"></script>
-
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  const distance = 400; // pixels to move
+		  const speed = 3000;   // duration in milliseconds
+	  
+		  // First, declare the variables for the functions
+		  let moveRight, moveLeft;
+	  
+		  // Now assign the functions to the declared variables
+		  moveRight = function() {
+			$("#greeting-img").animate(
+			  { left: `+=${distance}px` },
+			  speed,
+			  moveLeft  // Callback when moveRight completes
+			);
+		  };
+	  
+		  moveLeft = function() {
+			$("#greeting-img").animate(
+			  { left: `-=${distance}px` },
+			  speed,
+			  moveRight  // Callback when moveLeft completes
+			);
+		  };
+	  
+		  // Start the continuous back-and-forth animation
+		  moveRight();
+		});
+	  </script>
 </body>
 </html>
