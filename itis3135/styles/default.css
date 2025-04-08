@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 2000px;
-    width: 80%;
+    width: 90%;
     min-height: 100vh;
     flex-direction: column;
     color: #474448;
@@ -17,7 +17,7 @@ body {
 #greeting-img {
     margin-bottom: 70px;
     position: relative;
-    margin-left: -30px;
+    margin-left: -35px;
     border: 5px solid #474448;
     animation: borderColorChange 7s infinite alternate;
 }
@@ -61,7 +61,7 @@ a {
     text-decoration: underline;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 19px;
+    font-size: 17px;
 }
 
 a, h3 a {
@@ -97,6 +97,16 @@ header hr {
     margin-bottom: 15px;
     display: block;
     width: 90%;
+}
+
+footer hr {
+    border: none;
+    height: 3px;  /* Adjust thickness */
+    background-color: black; /* Change color if needed */
+    margin-top: 20px;
+    margin-bottom: 0px;
+    display: block;
+    width: 100%;
 }
 
 main {
@@ -343,7 +353,7 @@ header p {
     width: 90%;
 }
 
-form {
+#form-container form {
     background-color: #f2f8fb;
     border: 3px solid black;
     border-radius: 8px;
@@ -356,7 +366,7 @@ form {
 }
 
 /* Label styling */
-form label {
+#form-container form label {
     display: block;
     margin-top: 15px;
     font-weight: bold;
@@ -364,11 +374,11 @@ form label {
 }
 
 /* Input, select, and textarea styling */
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form select,
-form textarea {
+#form-container form input[type="text"],
+#form-container form input[type="email"],
+#form-container form input[type="tel"],
+#form-container form select,
+#form-container form textarea {
     padding: 8px;
     margin-top: 5px;
     border-radius: 5px;
@@ -391,10 +401,10 @@ form textarea {
 .checkbox-group {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /* 3 columns */
-    gap: 0px 10px;
+    gap: 0px 0px;
     margin-bottom: 40px;
-    text-align: center;
-    margin-left: 40px;
+    text-align: left;
+    margin-right: -70px;
 }
 
 .checkbox-group label {
@@ -409,7 +419,7 @@ form textarea {
 	flex-wrap: wrap; /* allows wrapping on smaller screens */
 	gap: 20px;        /* spacing between each radio+label */
 	align-items: center;
-    margin-left: 28px;
+    margin-left: 20px;
 }
 
 
@@ -442,13 +452,13 @@ input[type="submit"], input[type="reset"] {
 }
 
 /* Hover effects for better interaction */
-input[type="submit"]:hover, input[type="reset"]:hover {
+#form-container input[type="submit"]:hover, #form-container input[type="reset"]:hover {
     background-color: #251b59; /* darker color on hover */
     transform: scale(1.05); /* slight zoom effect */
 }
 
 /* Focus effects for accessibility */
-input[type="submit"]:focus, input[type="reset"]:focus {
+#form-container input[type="submit"]:focus, #form-container input[type="reset"]:focus {
     outline: none;
     box-shadow: 0 0 8px #d4aaa2;
 }
@@ -543,8 +553,107 @@ input[type="submit"]:focus, input[type="reset"]:focus {
     color: #3C4F76;
     margin-right: -19px;
 }
-/*media queries for tablets*/
 
+#byo-intro-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #586787;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    width: 600px;
+}
+
+#byo-intro-h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#byo-intro-container h3, #byo-intro-container p, #byo-intro-container label {
+    color: white;
+}
+
+#byo-intro-container form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#byo-intro-container #image-input {
+    background-color: #586787;
+    color: white;
+    margin-left: 80px;
+}
+
+#byo-intro-container textarea {
+    width: 300px;
+    height: 80px;
+    background-color: #f9dbd5;
+    border: 2px solid black;
+}
+
+#byo-intro-container input {
+    background-color: #f9dbd5;
+}
+
+#checkbox-label {
+    width: 70%;
+}
+
+#checkbox-agree {
+    margin-bottom: 20px;
+}
+
+#byo-intro-container #reset-btn, #byo-intro-container #submit-btn {
+    background-color: #f9dbd5;
+    padding:  10px 20px;
+    font-size: 15px;
+}
+
+#byo-intro-container #reset-btn:hover{
+    background-color: #c0a29c;
+}
+
+#byo-intro-container #submit-btn:hover{
+    background-color: #c0a29c;
+}
+
+/* Ensure labels display as block-level elements */
+.block-label {
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  /* Container for each entire course entry */
+  .course-entry {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the title block & reason block */
+  .course-title-block,
+  .course-reason-block {
+    margin-bottom: 10px;
+  }
+  
+  /* Optionally, style the input and textarea inside the blocks */
+  .course-entry input[type="text"],
+  .course-entry textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* For the row containing the delete button */
+  .course-button-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+/*media queries for tablets*/
 @media (max-width: 1023px) {
     body {
         width: 90%;

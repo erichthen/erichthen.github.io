@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Erich Then's Egotistical Taco Terrier | ITIS3135 | BYO Intro</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2 id="byo-intro-h2">BYO Intro</h2>
+        <div id="byo-intro-container">
+
+            <h3 id="byo-intro-subtitle">Time to build your own introduction page!<br>Please fill out the form below so your page can be created.</h3>
+
+            <form id="byo-intro-form">
+                <label for="name-input">Your name: </label>
+                <input id="name-input" type="text" required size="30">
+
+                <label for="mascot-input">Your mascot: </label>
+                <input id="mascot-input" type="text" required size="30">
+
+                <label for="image-input">Upload an image of yourself: </label>
+                <input id="image-input" type="file">
+
+                <label for="caption-input">Write a caption for the image: </label>
+                <textarea id="caption-input" required></textarea>
+
+                <label for="personal-input">Personal background: </label>
+                <textarea id="personal-input" required></textarea>
+
+                <label for="professional-input">Professional background: </label>
+                <textarea id="professional-input" required></textarea>
+
+                <label for="academic-input">Academic background: </label>
+                <textarea id="academic-input" required></textarea>
+
+                <label for="webdev-input">Web development background: </label>
+                <textarea id="webdev-input" required></textarea>
+
+                <label for="computer-platform-input">Primary Computer Platform</label>
+                <input id="computer-platform-input" type="text" required size="30">
+                
+                <p style="margin-bottom: -10px">Add the courses you are taking</p>
+
+                <div id="courses-section">
+                    <div id="courses-container"></div>
+                    <button type="button" id="add-course-btn">Add Course</button>
+                </div>
+
+                <label for="funny-input">Funny thing? </label>
+                <input type="text" id="funny-input" size="30">
+
+                <label for="anything-else">Anything else? </label>
+                <input type="text" id="anything-else" size="30">
+
+
+                <label id="checkbox-label" for="checkbox-agree">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+                    <input id="checkbox-agree" type="checkbox" required>
+                </label>
+
+                <button id="reset-btn" type="button">Reset</button>
+                <button id="submit-btn" type="submit">Submit</button>
+
+            </form>
+            <div id="generated-content" style="display:none;"></div>
+        </div>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/byo_intro.js"></script>
+</body>
+</html>
+
+
