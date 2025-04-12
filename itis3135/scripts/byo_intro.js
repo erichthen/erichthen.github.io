@@ -7,11 +7,10 @@ const title = document.getElementById("byo-intro-h2");
 const subtitle = document.getElementById("byo-intro-subtitle");
 
 addCourseBtn.addEventListener('click', function() {
-  // Create a new div to hold the entire course entry
+
   const courseDiv = document.createElement('div');
   courseDiv.classList.add('course-entry');
 
-  // --------- Course Title Block ---------
   const titleBlock = document.createElement('div');
   titleBlock.classList.add('course-title-block');
   
@@ -24,11 +23,9 @@ addCourseBtn.addEventListener('click', function() {
   courseTitleInput.required = true;
   courseTitleInput.classList.add('course-title');
   
-  // Append the course title elements to the title block
   titleBlock.appendChild(courseTitleLabel);
   titleBlock.appendChild(courseTitleInput);
 
-  // --------- Course Reason Block ---------
   const reasonBlock = document.createElement('div');
   reasonBlock.classList.add('course-reason-block');
 
@@ -40,11 +37,9 @@ addCourseBtn.addEventListener('click', function() {
   courseDescTextarea.required = true;
   courseDescTextarea.classList.add('course-reason');
   
-  // Append the course reason elements to the reason block
   reasonBlock.appendChild(courseDescLabel);
   reasonBlock.appendChild(courseDescTextarea);
 
-  // --------- Delete Button Block ---------
   const buttonBlock = document.createElement('div');
   buttonBlock.classList.add('course-button-row');
 
@@ -52,30 +47,27 @@ addCourseBtn.addEventListener('click', function() {
   deleteBtn.type = 'button';
   deleteBtn.textContent = 'Delete Course';
   deleteBtn.classList.add('delete-course-btn');
+  deleteBtn.style.marginTop = '-15px';
+  deleteBtn.style.backgroundColor = '#f9dbd5';
   deleteBtn.addEventListener('click', function() {
     coursesContainer.removeChild(courseDiv);
   });
   
-  // Append the delete button to its block
   buttonBlock.appendChild(deleteBtn);
 
-  // --------- Assemble the course entry ---------
   courseDiv.appendChild(titleBlock);
   courseDiv.appendChild(reasonBlock);
   courseDiv.appendChild(buttonBlock);
 
-  // Append the complete course entry into the container
   coursesContainer.appendChild(courseDiv);
 });
 
-// Handle form submission to generate the introduction page
 const form = document.getElementById('byo-intro-form');
 const generatedContent = document.getElementById('generated-content');
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  // Get form values
   const name = document.getElementById('name-input').value;
   const mascot = document.getElementById('mascot-input').value;
   const imageInput = document.getElementById('image-input');
@@ -93,7 +85,6 @@ form.addEventListener('submit', function(event) {
   const funny = document.getElementById('funny-input').value;
   const anythingElse = document.getElementById('anything-else').value;
 
-  // Get courses information from dynamically added course entries
   let coursesHTML = '';
   const courseEntries = coursesContainer.querySelectorAll('.course-entry');
   courseEntries.forEach((entry) => {
@@ -102,7 +93,6 @@ form.addEventListener('submit', function(event) {
     coursesHTML += `<li><strong>${courseTitle}:</strong> ${courseReason}</li>`;
   });
 
-  // Build the generated introduction page HTML
   const generatedHTML = `
     <main>
       <figure>
@@ -125,11 +115,10 @@ form.addEventListener('submit', function(event) {
           <li><strong>I'd also like to Share: </strong> ${anythingElse}</li>
         </ul>
       </div>
-      <button id="back-to-form-btn" type="button">Fill out form again</button>
+      <button style="background-color: #586787; color: white; padding: 10px;" id="back-to-form-btn" type="button">Fill out form again</button>
     </main>
   `;
 
-  // Hide the form and display the generated content
   form.style.display = 'none';
   container.style.backgroundColor = '#f9dbd5';
   title.textContent = "Introduction";
@@ -138,9 +127,6 @@ form.addEventListener('submit', function(event) {
   generatedContent.style.display = 'block';
   subtitle.style.display = "none";
 
-
-
-  // Add event listener for the 'Fill out form again' button
   document.getElementById('back-to-form-btn').addEventListener('click', function() {
     title.textContent = "BYO Intro";
     container.style.textAlign = "center";
@@ -151,4 +137,10 @@ form.addEventListener('submit', function(event) {
     form.reset();
     coursesContainer.innerHTML = '';
   });
+});
+
+resetBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  form.reset();
+  coursesContainer.innerHTML = '';
 });

@@ -91,8 +91,8 @@ header {
 
 header hr {
     border: none;
-    height: 3px;  /* Adjust thickness */
-    background-color: black; /* Change color if needed */
+    height: 3px;
+    background-color: black; 
     margin-top: 20px;
     margin-bottom: 15px;
     display: block;
@@ -101,8 +101,8 @@ header hr {
 
 footer hr {
     border: none;
-    height: 3px;  /* Adjust thickness */
-    background-color: black; /* Change color if needed */
+    height: 3px;  
+    background-color: black; 
     margin-top: 20px;
     margin-bottom: 0px;
     display: block;
@@ -365,7 +365,6 @@ header p {
     margin-left: 9px;
 }
 
-/* Label styling */
 #form-container form label {
     display: block;
     margin-top: 15px;
@@ -373,7 +372,6 @@ header p {
     color: #333;
 }
 
-/* Input, select, and textarea styling */
 #form-container form input[type="text"],
 #form-container form input[type="email"],
 #form-container form input[type="tel"],
@@ -386,7 +384,6 @@ header p {
     box-sizing: border-box;
 }
 
-/* Checkbox and radio container styling */
 .checkbox-group,
 .radio-group {
     margin-top: 10px;
@@ -400,7 +397,7 @@ header p {
 
 .checkbox-group {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr); /* 3 columns */
+	grid-template-columns: repeat(2, 1fr); 
     gap: 0px 0px;
     margin-bottom: 40px;
     text-align: left;
@@ -416,8 +413,8 @@ header p {
 .radio-group {
     margin-bottom: 50px;
     display: flex;
-	flex-wrap: wrap; /* allows wrapping on smaller screens */
-	gap: 20px;        /* spacing between each radio+label */
+	flex-wrap: wrap; 
+	gap: 20px;       
 	align-items: center;
     margin-left: 20px;
 }
@@ -429,17 +426,14 @@ header p {
 	gap: 6px;
 }
 
-
-/* Container for buttons (optional, if you'd like horizontal alignment) */
 .button-container {
     display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    gap: 15px; /* space between buttons */
+    justify-content: center; 
+    gap: 15px; 
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
-/* General button styling */
 input[type="submit"], input[type="reset"] {
     background-color: #3C4F76;
     color: white;
@@ -451,13 +445,11 @@ input[type="submit"], input[type="reset"] {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Hover effects for better interaction */
 #form-container input[type="submit"]:hover, #form-container input[type="reset"]:hover {
-    background-color: #251b59; /* darker color on hover */
-    transform: scale(1.05); /* slight zoom effect */
+    background-color: #251b59;
+    transform: scale(1.05); 
 }
 
-/* Focus effects for accessibility */
 #form-container input[type="submit"]:focus, #form-container input[type="reset"]:focus {
     outline: none;
     box-shadow: 0 0 8px #d4aaa2;
@@ -532,8 +524,8 @@ input[type="submit"], input[type="reset"] {
 
 #project-overview-container hr {
     border: none;
-    height: 1px;  /* Adjust thickness */
-    background-color: black; /* Change color if needed */
+    height: 1px;
+    background-color: black;
     margin-top: 20px;
     margin-bottom: 15px;
     display: block;
@@ -571,7 +563,7 @@ input[type="submit"], input[type="reset"] {
     margin-bottom: 20px;
 }
 
-#byo-intro-container h3, #byo-intro-container p, #byo-intro-container label {
+#byo-intro-subtitle, #byo-intro-container p, #byo-intro-container label {
     color: white;
 }
 
@@ -592,7 +584,7 @@ input[type="submit"], input[type="reset"] {
     width: 300px;
     height: 80px;
     background-color: #f9dbd5;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 #byo-intro-container input {
@@ -621,37 +613,39 @@ input[type="submit"], input[type="reset"] {
     background-color: #c0a29c;
 }
 
-/* Ensure labels display as block-level elements */
+#byo-intro-container #add-course-btn {
+    background-color: #f9dbd5;
+}
+
+#byo-intro-container #add-course-btn:hover {
+    background-color: #c0a29c;
+}
+
 .block-label {
     display: block;
     margin-bottom: 4px;
-  }
+}
   
-  /* Container for each entire course entry */
-  .course-entry {
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  
-  /* Style for the title block & reason block */
-  .course-title-block,
-  .course-reason-block {
-    margin-bottom: 10px;
-  }
-  
-  /* Optionally, style the input and textarea inside the blocks */
-  .course-entry input[type="text"],
-  .course-entry textarea {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  /* For the row containing the delete button */
-  .course-button-row {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-  }
+.course-entry {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.course-title-block,
+.course-reason-block {
+  margin-bottom: 10px;
+}
+.course-entry input[type="text"],
+.course-entry textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.course-button-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
 
 /*media queries for tablets*/
 @media (max-width: 1023px) {
