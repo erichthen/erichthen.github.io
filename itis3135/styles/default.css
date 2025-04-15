@@ -86,7 +86,11 @@ header {
     align-items: center;    
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 33px;
+}
+
+#main-title {
+    margin-bottom: 16px;
 }
 
 header hr {
@@ -97,6 +101,15 @@ header hr {
     margin-bottom: 15px;
     display: block;
     width: 90%;
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 27px;
+}
+
+footer nav {
+    margin-bottom: -10px;
 }
 
 footer hr {
@@ -118,11 +131,6 @@ main {
 nav {
     display: flex;
     align-items: center; 
-}
-
-footer {
-    margin-top: auto;
-    margin-bottom: 40px;
 }
 
 #designed-by-container {
@@ -267,6 +275,8 @@ footer p {
     text-align: center;
     font-weight: bold;
 }
+
+
 
 header p {
     font-weight: bold;
@@ -645,6 +655,109 @@ input[type="submit"], input[type="reset"] {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
+}
+
+#slideshow-title {
+    margin-top: 50px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 950px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.slideshow-container .slide-div img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    max-width: none;
+}
+
+#ai-prompts-slideshow-title {
+    text-align: center;
+}
+
+.slide-div {
+    display: none;
+    width: 100%;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.number-text {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #24324e;
+    padding: 2px 16px;
+    color: white;
+}
+
+#caption {  
+    color: #f9dbd5;
+}
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col {
+    float: left;
+    width: 11.11%; 
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active, .demo:hover {
+    opacity: 1;
+}
+
+.slideshow-container ul {
+    margin-bottom: 0px;
 }
 
 /*media queries for tablets*/

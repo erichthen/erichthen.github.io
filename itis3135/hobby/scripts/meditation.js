@@ -175,7 +175,7 @@ $(document).ready(function () {
         let speed = 40000; 
         let screenWidth = $(window).width();
         let figureWidth = $(figure).outerWidth();
-        let startPosition = -figureWidth * 2; 
+        let startPosition = -figureWidth * 4.5; 
         let endPosition = screenWidth + figureWidth; 
     
         function animateFigure() {
@@ -202,7 +202,7 @@ $(document).ready(function () {
     $("#why-btn").click(function () {
         // Reset each image to different starting positions
         moveImage("#why-figure-1", 0, "-577px");  // First image reset
-        moveImage("#why-figure-2", 11111, "-900px");  // Second image starts further left
+        moveImage("#why-figure-2", 11111, "-1200px");  // Second image starts further left
     });
 
     // fade the image on schedule page in longer than other contents are faded in

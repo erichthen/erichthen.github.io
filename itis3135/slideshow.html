@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Erich Then's Egotistical Taco Terrier | ITIS3135 | Slideshow Gallery</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<div data-include="components/header.html"></div>
+
+    <main>
+		<h2 id="slideshow-title">Slideshow Gallery</h2>
+        <div class="slideshow-container">
+            <div class="slide-div">
+                <div class="number-text">1 / 9</div>
+                <img src="images/elephant.jpg" alt="picture of an elephant">
+            </div>
+
+            <div class="slide-div">
+                <div class="number-text">2 / 9</div>
+                <img src="images/rhino.jpg" alt="picture of a rhino">
+            </div>
+
+            <div class="slide-div">
+                <div class="number-text">3 / 9</div>
+                <img src="images/iguana.jpg" alt="picture of an iguana">
+            </div>
+
+            <div class="slide-div">
+                <div class="number-text">4 / 9</div>
+                <img src="images/city.jpg" alt="picture of a futuristic city">
+            </div>
+
+            <div class="slide-div">
+                <div class="number-text">5 / 9</div>
+                <img src="images/heaven.jpg" alt="picture of heaven">
+            </div>
+
+            <div class="slide-div">
+                <div class="number-text">6 / 9</div>
+                <img src="images/t_rex.jpg" alt="picture of a t-rex">
+            </div>
+
+            <div class="slide-div">
+                <div class="number-text">7 / 9</div>
+                <img src="images/house.jpg" alt="picture of a nice modern house">
+            </div>
+
+            <div class="slide-div">
+                <div class="number-text">8 / 9</div>
+                <img src="images/engine.jpg" alt="picture of a powerful car engine">
+            </div>
+
+            <div class="slide-div">
+                <div class="number-text">9 / 9</div>
+                <img src="images/noodles.jpg" alt="picture of noodles">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img class="demo cursor" src="images/elephant.jpg" onclick="currentSlide(1)" style="width:100%" alt="E - for Elephant">
+                </div>
+
+                <div class="col">
+                    <img class="demo cursor" src="images/rhino.jpg" onclick="currentSlide(2)" style="width:100%" alt="R - for Rhinoceros">
+                </div>
+
+                <div class="col">
+                    <img class="demo cursor" src="images/iguana.jpg" onclick="currentSlide(3)" style="width:100%" alt="I - for Iguana">
+                </div>
+
+                <div class="col">
+                    <img class="demo cursor" src="images/city.jpg" onclick="currentSlide(4)" style="width:100%" alt="C - for City">
+                </div>
+
+                <div class="col">
+                    <img class="demo cursor" src="images/heaven.jpg" onclick="currentSlide(5)" style="width:100%" alt="H - for Heaven">
+                </div>
+
+                <div class="col">
+                    <img class="demo cursor" src="images/t_rex.jpg" onclick="currentSlide(6)" style="width:100%" alt="T - for T-rex">
+                </div>
+
+                <div class="col">
+                    <img class="demo cursor" src="images/house.jpg" onclick="currentSlide(7)" style="width:100%" alt="H - for House">
+                </div>
+
+                <div class="col">
+                    <img class="demo cursor" src="images/engine.jpg" onclick="currentSlide(8)" style="width:100%" alt="E - for Engine">
+                </div>
+
+                <div class="col">
+                    <img class="demo cursor" src="images/noodles.jpg" onclick="currentSlide(9)" style="width:100%" alt="N - for Noodles">
+                </div>
+            </div>
+            <h3 id="ai-prompts-slideshow-title">AI Prompts I used to generate the above images (with OpenAi's GPT 4o): </h3>
+            <ul>
+                <li>Please generate a landscape (longer width than height) picture of an elephant.</li>
+                <li>Please generate a landscape picture of a Rhinoceros.</li>
+                <li>Beautiful, now please generate a landscape picture of an Iguana.</li>
+                <li>Now, please generate a landscape picture of a city.</li>
+                <li>This is good, but too realistic. Give me a landscape picture of a futuristic, fantasy city.</li>
+                <li>That looks awesome, thank you. Now please generate a landscape photo of heaven–whatever you think that may look like.</li>
+                <li>Cool, now I need a landscape picture of a Tyrannosaurus rex (T-Rex).</li>
+                <li>Awesome, now I need a landscape picture of a house. Make it big and modern.</li>
+                <li>Now, I need a landscape picture of a powerful car engine.</li>
+                <li>Finally, I need a landscape picture of noodles.</li>
+            </ul>
+        </div>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/slideshow.js"></script>
+
+</body>
+
+</html>
