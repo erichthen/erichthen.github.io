@@ -659,6 +659,15 @@ input[type="submit"], input[type="reset"] {
 
 #slideshow-title {
     margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+#slideshow-paragraph {
+    margin-bottom: -3px;
+}
+
+#slideshow-link {
+    margin-bottom: 20px;
 }
 
 .slideshow-container {
@@ -667,8 +676,10 @@ input[type="submit"], input[type="reset"] {
     width: 80%;
     margin: 0 auto;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
+
+
 
 .slideshow-container .slide-div img {
     width: 100%;
@@ -732,12 +743,13 @@ input[type="submit"], input[type="reset"] {
     color: #f9dbd5;
 }
 
-.row {
+.slideshow-container .row {
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
-.row:after {
+.slideshow-container .row:after {
     content: "";
     display: table;
     clear: both;
